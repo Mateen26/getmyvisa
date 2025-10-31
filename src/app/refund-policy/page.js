@@ -1,0 +1,42 @@
+import { refundPolicyText, siteConfig } from '@/lib/content';
+
+export const metadata = {
+  title: 'Refund Policy | Cipher Global LLC',
+  description:
+    'Understand the Cipher Global LLC refund policy for Dubai visa and business setup services. Most fees are non-refundable once work begins.',
+};
+
+export default function RefundPolicyPage() {
+  return (
+    <div className="bg-neutral-50">
+      <section className="bg-red-900 text-white">
+        <div className="mx-auto max-w-7xl px-4 py-20">
+          <h1 className="text-4xl font-semibold md:text-5xl">Refund Policy</h1>
+          <p className="mt-4 max-w-2xl text-lg text-red-100">
+            Transparent processing policies for all Cipher Global LLC clients.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-4xl px-4 py-16">
+        <article className="space-y-6 rounded-3xl border border-red-100 bg-white p-8 text-sm leading-relaxed text-slate-700">
+          {refundPolicyText.split('\n\n').map((block) => {
+            const lines = block.split('\n');
+            return (
+              <p key={block} className="text-slate-700">
+                {lines.map((line, index) => (
+                  <span key={index}>
+                    {line}
+                    {index < lines.length - 1 && <br />}
+                  </span>
+                ))}
+              </p>
+            );
+          })}
+          <p className="mt-8 text-xs uppercase tracking-wide text-red-700">{siteConfig.locationTagline}</p>
+        </article>
+      </section>
+    </div>
+  );
+}
+

@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-neutral-50 text-slate-900 font-sans antialiased;
+}
+
+a {
+  @apply text-red-800 underline-offset-2 transition-colors;
+}
+
+a:hover {
+  @apply text-red-900;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  @apply outline outline-2 outline-offset-2 outline-yellow-500;
+}
+
+[data-animate] {
+  opacity: 0;
+  --reveal-x: 0px;
+  --reveal-y: 28px;
+  --reveal-scale: 1;
+  transform: translate3d(var(--reveal-x), var(--reveal-y), 0) scale(var(--reveal-scale));
+  transition: opacity 0.8s ease, transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+[data-animate="fade-up"] {
+  --reveal-y: 36px;
+}
+
+[data-animate="fade-down"] {
+  --reveal-y: -36px;
+}
+
+[data-animate="fade-left"] {
+  --reveal-x: -36px;
+  --reveal-y: 0px;
+}
+
+[data-animate="fade-right"] {
+  --reveal-x: 36px;
+  --reveal-y: 0px;
+}
+
+[data-animate="scale"] {
+  --reveal-scale: 0.92;
+  --reveal-y: 0px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-animate] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
