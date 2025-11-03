@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -125,6 +126,23 @@ export default function RootLayout({ children }) {
         <Header />
         <main className="min-h-screen bg-neutral-50 overflow-x-hidden">{children}</main>
         <Footer />
+        <Script
+          id="tawk-to"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/6908edc2b7d5511951f2e8a7/1j95e1gr9';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+})();
+          `,
+          }}
+        />
       </body>
     </html>
   );
