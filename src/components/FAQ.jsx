@@ -14,15 +14,15 @@ export default function FAQ({ items }) {
       {items.map((faq, index) => {
         const isOpen = index === openIndex;
         return (
-          <div key={faq.question} className="rounded-xl border border-red-100 bg-white shadow-sm">
+          <div key={faq.question} className="rounded-xl border border-[#cfe2ff] bg-white shadow-sm">
             <button
               type="button"
               onClick={() => toggle(index)}
               className="flex w-full items-center justify-between gap-6 px-6 py-4 text-left"
               aria-expanded={isOpen}
             >
-              <span className="text-base font-semibold text-red-900">{faq.question}</span>
-              <span className="text-2xl text-yellow-500" aria-hidden>
+              <span className="text-base font-semibold text-[#0b1f40]">{faq.question}</span>
+              <span className="text-2xl text-[#0074ff]" aria-hidden>
                 {isOpen ? '−' : '+'}
               </span>
             </button>

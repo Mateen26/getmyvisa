@@ -12,21 +12,21 @@ export default function CTASticky({ targetId = 'lead-form' }) {
 
   return (
     <div className="fixed inset-x-4 bottom-4 z-40 md:hidden">
-      <div className="rounded-2xl border border-red-200 bg-white/95 p-4 shadow-xl backdrop-blur">
-        <p className="text-sm font-semibold text-red-900">
+      <div className="rounded-2xl border border-[#dbe9ff] bg-white/95 p-4 shadow-xl backdrop-blur">
+        <p className="text-sm font-semibold text-[#0b1f40]">
           Ready to Start? Contact Our Dubai Visa Team Today.
         </p>
         <div className="mt-3 flex gap-3">
           <button
             type="button"
             onClick={handleScroll}
-            className="flex-1 rounded-full bg-yellow-500 px-4 py-2 text-sm font-semibold text-black shadow-md transition hover:bg-yellow-400"
+            className="flex-1 rounded-full bg-[#0074ff] px-4 py-2 text-sm font-semibold text-white! shadow-md transition hover:bg-[#006ae6]"
           >
             Apply Now
           </button>
           <a
             href={siteConfig.whatsappHref}
-            className="flex-1 rounded-full border border-red-200 px-4 py-2 text-center text-sm font-semibold text-red-900 transition hover:border-red-300 hover:bg-red-50"
+            className="flex-1 rounded-full border border-[#dbe9ff] px-4 py-2 text-center text-sm font-semibold text-[#0b1f40] transition hover:border-[#b3d9ff] hover:bg-[#f0f6ff]"
           >
             WhatsApp
           </a>

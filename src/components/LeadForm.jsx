@@ -94,9 +94,9 @@ export default function LeadForm({ defaultVisaType = 'investor', smtpReady = tru
   };
 
   return (
-    <div className="w-full rounded-3xl border border-red-100 bg-white p-6 shadow-xl lg:p-8">
+    <div className="w-full rounded-3xl border border-[#cfe2ff] bg-white p-6 shadow-xl lg:p-8">
       {!smtpReady && (
-        <div className="mb-4 rounded-lg border border-yellow-400 bg-yellow-50 p-4 text-sm text-red-900" role="alert">
+        <div className="mb-4 rounded-lg border border-[#8fc3ff] bg-[#f0f6ff] p-4 text-sm text-[#0b1f40]" role="alert">
           Email delivery is not configured yet. Add SMTP environment variables to enable form submissions.
         </div>
       )}
@@ -118,7 +118,7 @@ export default function LeadForm({ defaultVisaType = 'investor', smtpReady = tru
 
       <form className="space-y-4" onSubmit={handleSubmit} noValidate>
         <div>
-          <label className="block text-sm font-semibold text-red-900" htmlFor="fullName">
+          <label className="block text-sm font-semibold text-[#0b1f40]" htmlFor="fullName">
             Full Name
           </label>
           <input
@@ -127,7 +127,7 @@ export default function LeadForm({ defaultVisaType = 'investor', smtpReady = tru
             type="text"
             value={form.fullName}
             onChange={handleChange}
-            className="mt-1 w-full rounded-lg border border-red-200 bg-white px-4 py-3 text-sm shadow-sm focus:border-yellow-500"
+            className="mt-1 w-full rounded-lg border border-[#dbe9ff] bg-white px-4 py-3 text-sm shadow-sm focus:border-[#0074ff]"
             required
             autoComplete="name"
           />
@@ -135,7 +135,7 @@ export default function LeadForm({ defaultVisaType = 'investor', smtpReady = tru
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-red-900" htmlFor="email">
+          <label className="block text-sm font-semibold text-[#0b1f40]" htmlFor="email">
             Email
           </label>
           <input
@@ -144,7 +144,7 @@ export default function LeadForm({ defaultVisaType = 'investor', smtpReady = tru
             type="email"
             value={form.email}
             onChange={handleChange}
-            className="mt-1 w-full rounded-lg border border-red-200 bg-white px-4 py-3 text-sm shadow-sm focus:border-yellow-500"
+            className="mt-1 w-full rounded-lg border border-[#dbe9ff] bg-white px-4 py-3 text-sm shadow-sm focus:border-[#0074ff]"
             required
             autoComplete="email"
           />
@@ -152,7 +152,7 @@ export default function LeadForm({ defaultVisaType = 'investor', smtpReady = tru
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-red-900" htmlFor="whatsapp">
+          <label className="block text-sm font-semibold text-[#0b1f40]" htmlFor="whatsapp">
             WhatsApp Number
           </label>
           <input
@@ -161,7 +161,7 @@ export default function LeadForm({ defaultVisaType = 'investor', smtpReady = tru
             type="tel"
             value={form.whatsapp}
             onChange={handleChange}
-            className="mt-1 w-full rounded-lg border border-red-200 bg-white px-4 py-3 text-sm shadow-sm focus:border-yellow-500"
+            className="mt-1 w-full rounded-lg border border-[#dbe9ff] bg-white px-4 py-3 text-sm shadow-sm focus:border-[#0074ff]"
             required
             autoComplete="tel"
             placeholder="e.g. +92 325 958 72"
@@ -170,7 +170,7 @@ export default function LeadForm({ defaultVisaType = 'investor', smtpReady = tru
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-red-900" htmlFor="visaType">
+          <label className="block text-sm font-semibold text-[#0b1f40]" htmlFor="visaType">
             Visa Type
           </label>
           <select
@@ -178,7 +178,7 @@ export default function LeadForm({ defaultVisaType = 'investor', smtpReady = tru
             name="visaType"
             value={form.visaType}
             onChange={handleChange}
-            className="mt-1 w-full rounded-lg border border-red-200 bg-white px-4 py-3 text-sm shadow-sm focus:border-yellow-500"
+            className="mt-1 w-full rounded-lg border border-[#dbe9ff] bg-white px-4 py-3 text-sm shadow-sm focus:border-[#0074ff]"
           >
             {visaOptions.map((option) => (
               <option key={option.value} value={option.value}>
@@ -189,7 +189,7 @@ export default function LeadForm({ defaultVisaType = 'investor', smtpReady = tru
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-red-900" htmlFor="message">
+          <label className="block text-sm font-semibold text-[#0b1f40]" htmlFor="message">
             Message (optional)
           </label>
           <textarea
@@ -198,14 +198,14 @@ export default function LeadForm({ defaultVisaType = 'investor', smtpReady = tru
             rows={3}
             value={form.message}
             onChange={handleChange}
-            className="mt-1 w-full rounded-lg border border-red-200 bg-white px-4 py-3 text-sm shadow-sm focus:border-yellow-500"
+            className="mt-1 w-full rounded-lg border border-[#dbe9ff] bg-white px-4 py-3 text-sm shadow-sm focus:border-[#0074ff]"
             placeholder="Share any details, timelines, or questions."
           />
         </div>
 
         <button
           type="submit"
-          className="w-full rounded-full bg-yellow-500 px-6 py-3 text-sm font-semibold text-black shadow-md transition hover:bg-yellow-400 disabled:cursor-not-allowed disabled:opacity-60"
+          className="w-full rounded-full bg-[#0074ff] px-6 py-3 text-sm font-semibold text-white! shadow-md transition hover:bg-[#006ae6] disabled:cursor-not-allowed disabled:opacity-60"
           disabled={submitting}
         >
           {submitting ? 'Sending…' : 'Apply Now'}

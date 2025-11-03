@@ -13,15 +13,15 @@ export default function SplitSelector({ options, active, onChange }) {
             aria-pressed={isActive}
             className={`flex flex-col gap-3 rounded-2xl border-2 px-6 py-6 text-left transition cursor-pointer ${
               isActive
-                ? 'border-yellow-500 bg-red-900 text-white shadow-lg'
-                : 'border-red-100 bg-white text-slate-900 hover:border-red-200 hover:shadow-md'
+                ? 'border-[#0074ff] bg-[#0074ff] text-white shadow-lg'
+                : 'border-[#dbe9ff] bg-white text-slate-900 hover:border-[#b3d9ff] hover:shadow-md'
             }`}
           >
-            <span className="text-sm font-semibold uppercase tracking-wide text-yellow-400">
+            <span className={`text-sm font-semibold uppercase tracking-wide ${isActive ? 'text-white/80' : 'text-[#0074ff]'}`}>
               {option.badge}
             </span>
             <span className="text-2xl font-semibold">{option.title}</span>
-            <span className={`text-sm leading-relaxed ${isActive ? 'text-red-50' : 'text-slate-600'}`}>
+            <span className={`text-sm leading-relaxed ${isActive ? 'text-white/85' : 'text-slate-600'}`}>
               {option.description}
             </span>
             {option.points && (
@@ -29,9 +29,9 @@ export default function SplitSelector({ options, active, onChange }) {
                 {option.points.map((point) => (
                   <li
                     key={point}
-                    className={`flex items-start gap-2 ${isActive ? 'text-red-50' : 'text-slate-700'}`}
+                    className={`flex items-start gap-2 ${isActive ? 'text-white/85' : 'text-slate-700'}`}
                   >
-                    <span className="mt-1 h-2 w-2 rounded-full bg-yellow-400" aria-hidden />
+                    <span className={`mt-1 h-2 w-2 rounded-full ${isActive ? 'bg-white/80' : 'bg-[#0074ff]'}`} aria-hidden />
                     <span>{point}</span>
                   </li>
                 ))}

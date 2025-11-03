@@ -13,11 +13,11 @@ body {
 }
 
 a {
-  @apply text-red-800 underline-offset-2 transition-colors;
+  @apply text-inherit underline-offset-2 transition-colors;
 }
 
 a:hover {
-  @apply text-red-900;
+  @apply text-inherit underline;
 }
 
 button:focus-visible,
@@ -25,7 +25,7 @@ input:focus-visible,
 textarea:focus-visible,
 select:focus-visible,
 a:focus-visible {
-  @apply outline outline-2 outline-offset-2 outline-yellow-500;
+  @apply outline outline-2 outline-offset-2 outline-[#0074ff];
 }
 
 [data-animate] {

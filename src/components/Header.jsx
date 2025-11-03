@@ -84,8 +84,8 @@ export default function Header() {
   const shouldBeWhite = isHome ? overWhiteSection : scrollProgress >= 0.5;
     
   const headerBg = isHome && !shouldBeWhite
-    ? `bg-[#521113]/80 backdrop-blur-md border-[#521113]/20`
-    : `bg-white/95 backdrop-blur-md border-red-100`;
+    ? `bg-white/90 backdrop-blur-md border-[#dbe9ff]`
+    : `bg-white/95 backdrop-blur-md border-[#dbe9ff]`;
 
   return (
     <header
@@ -96,9 +96,7 @@ export default function Header() {
         <div className="flex w-full items-center justify-between gap-6 md:w-auto">
           <Link 
             href="/" 
-            className={`text-lg font-semibold tracking-tight transition-colors duration-700 ease-in-out ${
-              isHome && !shouldBeWhite ? 'text-yellow-400!' : 'text-red-900!'
-            }`}
+            className="text-lg font-semibold tracking-tight text-[#0074ff] transition-colors duration-700 ease-in-out"
           >
             {siteConfig.name}
           </Link>
@@ -109,10 +107,8 @@ export default function Header() {
                 href={action.href}
                 className={`rounded-full border px-3 py-1 text-sm font-medium shadow-sm transition duration-700 ease-in-out ${
                   action.label === 'Call'
-                    ? 'bg-yellow-500 text-black! hover:bg-yellow-400'
-                    : isHome && !shouldBeWhite
-                    ? 'border-yellow-400/50 text-yellow-400! hover:border-yellow-400 hover:bg-yellow-400/10'
-                    : 'border-red-200 text-red-900! hover:border-red-300 hover:bg-red-50'
+                    ? 'border-transparent bg-[#0074ff] !text-white hover:bg-[#006ae6]'
+                    : 'border-[#0074ff]/40 text-[#0074ff] hover:border-[#0074ff] hover:bg-[#0074ff]/10'
                 }`}
               >
                 {action.label}
@@ -128,9 +124,7 @@ export default function Header() {
           >
             <span className="sr-only">Toggle navigation</span>
             <svg
-              className={`h-6 w-6 transition-colors duration-700 ease-in-out ${
-                isHome && !shouldBeWhite ? 'text-yellow-400!' : 'text-red-900!'
-              }`}
+              className="h-6 w-6 text-[#0074ff] transition-colors duration-700 ease-in-out"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
@@ -148,19 +142,17 @@ export default function Header() {
 
         <nav className="hidden items-center gap-6 text-sm font-medium md:flex lg:gap-8">
           {navigationLinks.map((link) => {
-            const activeClass = 'text-yellow-400! font-semibold';
-            const inactiveDark = 'text-red-900! hover:text-red-700';
-            const inactiveLight = 'text-yellow-400! hover:text-yellow-300';
+            const baseClass = 'relative transition duration-700 ease-in-out after:absolute after:bottom-[-6px] after:left-1/2 after:h-[3px] after:w-8 after:-translate-x-1/2 after:rounded-full after:transition after:duration-300 after:opacity-0 after:content-[""] focus-visible:text-[#0074ff] focus-visible:after:bg-[#0074ff] focus-visible:after:opacity-100 active:text-[#0074ff] active:after:bg-[#0074ff] active:after:opacity-100';
+            const activeClass = 'text-[#0074ff] font-semibold after:bg-[#0074ff] after:opacity-100';
+            const inactiveClass = 'text-slate-900 hover:text-[#005bcc]';
 
-            const linkClass = isHome && !shouldBeWhite
-              ? isActive(link.href) ? activeClass : inactiveLight
-              : isActive(link.href) ? activeClass : inactiveDark;
+            const linkClass = `${baseClass} ${isActive(link.href) ? activeClass : inactiveClass}`;
 
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`transition duration-700 ease-in-out ${linkClass}`}
+                className={linkClass}
               >
                 {link.label}
               </Link>
@@ -175,10 +167,8 @@ export default function Header() {
               href={action.href}
               className={`rounded-full px-4 py-2 text-sm font-semibold transition duration-700 ease-in-out ${
                 action.label === 'Call'
-                  ? 'bg-yellow-500 text-black! shadow-sm hover:bg-yellow-400'
-                  : isHome && !shouldBeWhite
-                  ? 'border border-yellow-400/50 text-yellow-400! hover:border-yellow-400 hover:bg-yellow-400/10'
-                  : 'border border-red-200 text-red-900! hover:border-red-300 hover:bg-red-50'
+                  ? 'border border-transparent bg-[#0074ff] text-white shadow-sm hover:bg-[#006ae6]'
+                  : 'border border-[#0074ff]/40 text-[#0074ff] hover:border-[#0074ff] hover:bg-[#0074ff]/10'
               }`}
             >
               {action.label}
@@ -189,21 +179,22 @@ export default function Header() {
 
       <div
         id="mobile-nav"
-        className={`origin-top overflow-hidden border-t border-red-900/40 bg-[#521113]/95 px-4 pb-4 text-white shadow-lg transition-all duration-300 ease-in-out md:hidden ${
+        className={`origin-top overflow-hidden border-t border-[#dbe9ff] bg-white/95 px-4 pb-4 text-slate-900 shadow-lg transition-all duration-300 ease-in-out md:hidden ${
           menuOpen ? 'max-h-112 opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-3'
         }`}
         aria-hidden={!menuOpen}
       >
+yoremobileclasses
         <nav className={`flex flex-col gap-2 py-4 text-sm font-semibold transition-opacity duration-300 ${menuOpen ? 'opacity-100' : 'opacity-0'}`}>
           {navigationLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className={`rounded-lg px-3 py-2 transition ${
+              className={`rounded-lg px-3 py-2 transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#99c7ff] ${
                 isActive(link.href)
-                  ? 'bg-yellow-100/10 text-yellow-400!'
-                  : 'text-red-100 hover:bg-yellow-100/5 hover:text-yellow-200'
+                  ? 'bg-[#0074ff]/10 text-[#0074ff] shadow-sm'
+                  : 'text-slate-700 hover:bg-[#0074ff]/5 hover:text-[#005bcc]'
               }`}
             >
               {link.label}
