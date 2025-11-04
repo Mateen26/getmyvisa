@@ -21,14 +21,6 @@ export const metadata = {
     'Secure your Dubai investor visa with Cipher Global LLC. Company formation, Emirates ID, family sponsorship, and banking support handled end-to-end.',
 };
 
-const smtpReady = Boolean(
-  process.env.SMTP_HOST &&
-    process.env.SMTP_PORT &&
-    process.env.SMTP_USER &&
-    process.env.SMTP_PASS &&
-    process.env.LEADS_TO,
-);
-
 export default function InvestorVisaPage() {
   return (
     <div className="bg-neutral-50">
@@ -56,7 +48,7 @@ export default function InvestorVisaPage() {
             </div>
           </div>
           <div id="investor-lead" className="lg:translate-y-8">
-            <LeadForm defaultVisaType="investor" smtpReady={smtpReady} />
+            <LeadForm defaultVisaType="investor" />
           </div>
         </div>
       </section>

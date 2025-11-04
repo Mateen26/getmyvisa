@@ -63,14 +63,6 @@ const touristContent = {
 };
 
 export default function HomePage() {
-  const smtpReady = Boolean(
-    process.env.SMTP_HOST &&
-      process.env.SMTP_PORT &&
-      process.env.SMTP_USER &&
-      process.env.SMTP_PASS &&
-      process.env.LEADS_TO,
-  );
-
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -97,7 +89,6 @@ export default function HomePage() {
         touristContent={touristContent}
         socialProofCards={socialProofCards}
         complianceDisclaimer={complianceDisclaimer}
-        smtpReady={smtpReady}
       />
     </>
   );

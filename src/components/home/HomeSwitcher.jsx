@@ -17,8 +17,6 @@ export default function HomeSwitcher({
   investorContent,
   touristContent,
   socialProofCards,
-  complianceDisclaimer,
-  smtpReady,
 }) {
   const [activeVisa, setActiveVisa] = useState(options[0]?.id ?? 'investor');
   const [mounted, setMounted] = useState(false);
@@ -155,7 +153,7 @@ export default function HomeSwitcher({
             </div>
           </div>
           <div id="lead-form" data-animate="fade-left">
-            <LeadForm key={activeVisa} defaultVisaType={activeVisa} smtpReady={smtpReady} />
+            <LeadForm key={activeVisa} defaultVisaType={activeVisa} />
           </div>
         </div>
       </section>
@@ -249,9 +247,9 @@ export default function HomeSwitcher({
 
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-4 py-12">
-          <div className="rounded-2xl border border-[#cfe2ff] bg-[#f0f6ff] p-6 text-sm text-[#0b1f40]" data-animate="fade-up">
+          {/* <div className="rounded-2xl border border-[#cfe2ff] bg-[#f0f6ff] p-6 text-sm text-[#0b1f40]" data-animate="fade-up">
             {complianceDisclaimer}
-          </div>
+          </div> */}
         </div>
       </section>
 

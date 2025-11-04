@@ -8,14 +8,6 @@ export const metadata = {
     'Contact Cipher Global LLC for Dubai investor and tourist visa support. Call, email, or WhatsApp our consultants.',
 };
 
-const smtpReady = Boolean(
-  process.env.SMTP_HOST &&
-    process.env.SMTP_PORT &&
-    process.env.SMTP_USER &&
-    process.env.SMTP_PASS &&
-    process.env.LEADS_TO,
-);
-
 export default function ContactPage() {
   return (
     <div className="bg-neutral-50">
@@ -37,7 +29,7 @@ export default function ContactPage() {
                 Share your investor or tourist visa goals and our UAE-registered team will respond quickly.
               </p>
             </div>
-            <LeadForm defaultVisaType="investor" smtpReady={smtpReady} />
+            <LeadForm defaultVisaType="investor" />
           </div>
           <div className="space-y-8">
             <ContactBlock />

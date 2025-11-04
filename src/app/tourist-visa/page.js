@@ -16,14 +16,6 @@ export const metadata = {
     'Fast, reliable Dubai tourist visa processing for 14, 30, 60, and 90 day stays. Cipher Global LLC delivers approvals in as little as 24 hours.',
 };
 
-const smtpReady = Boolean(
-  process.env.SMTP_HOST &&
-    process.env.SMTP_PORT &&
-    process.env.SMTP_USER &&
-    process.env.SMTP_PASS &&
-    process.env.LEADS_TO,
-);
-
 export default function TouristVisaPage() {
   return (
     <div className="bg-neutral-50">
@@ -71,7 +63,7 @@ export default function TouristVisaPage() {
               </div>
             </div>
             <div id="tourist-lead" className="self-start">
-              <LeadForm defaultVisaType="tourist" smtpReady={smtpReady} />
+              <LeadForm defaultVisaType="tourist" />
             </div>
           </div>
 

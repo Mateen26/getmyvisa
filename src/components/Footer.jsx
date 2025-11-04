@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import {
-  complianceDisclaimer,
+  // complianceDisclaimer,
   navigationLinks,
   siteConfig,
 } from '@/lib/content';
@@ -59,12 +59,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="md:col-span-1">
+          {/* <div className="md:col-span-1">
             <p className="text-sm font-semibold uppercase tracking-wide text-[#b3d9ff]">
               Compliance
             </p>
             <p className="mt-4 text-sm text-[#b3d9ff]">{complianceDisclaimer}</p>
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-12 border-t border-[#1c3766] pt-6 text-sm text-[#b3d9ff]">

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { navigationLinks, siteConfig } from '@/lib/content';
@@ -96,9 +97,16 @@ export default function Header() {
         <div className="flex w-full items-center justify-between gap-6 md:w-auto">
           <Link 
             href="/" 
-            className="text-lg font-semibold tracking-tight text-[#0074ff] transition-colors duration-700 ease-in-out"
+            className="flex items-center"
           >
-            {siteConfig.name}
+            <Image
+              src="/CIPHERGLOBALLOGOsecond.png"
+              alt={`${siteConfig.name} logo`}
+              width={160}
+              height={38}
+              className=" transition duration-700 ease-in-out"
+              priority
+            />
           </Link>
           <div className="flex items-center gap-3 md:hidden">
             {contactActions.map((action) => (

@@ -15,7 +15,7 @@ const initialState = (defaultVisaType) => ({
   message: '',
 });
 
-export default function LeadForm({ defaultVisaType = 'investor', smtpReady = true }) {
+export default function LeadForm({ defaultVisaType = 'investor' }) {
   const [form, setForm] = useState(() => initialState(defaultVisaType));
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState({ state: 'idle' });
@@ -72,20 +72,52 @@ export default function LeadForm({ defaultVisaType = 'investor', smtpReady = tru
     setStatus({ state: 'submitting' });
 
     try {
-      const response = await fetch('/api/lead', {
+      const baseUrl = process.env.NEXT_PUBLIC_ITAXI_API_URL;
+      if (!baseUrl) {
+        throw new Error('Contact service is not configured.');
+      }
+
+      const subjectLine = form.visaType ? `Visa enquiry: ${form.visaType}` : 'Visa enquiry';
+      const composedMessage = [
+        `WhatsApp: ${form.whatsapp}`,
+        `Visa type: ${form.visaType}`,
+        '',
+        form.message || 'No additional message provided.',
+      ].join('\n');
+
+      const payload = {
+        fullName: form.fullName,
+        email: form.email,
+        message: composedMessage,
+        subject: subjectLine,
+      };
+
+      const response = await fetch(`${baseUrl}/user/send-contact-us`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(form),
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to submit lead.');
+        const errorBody = await response.json().catch(() => ({}));
+        const message = errorBody?.message || 'Failed to submit lead.';
+        throw new Error(message);
       }
 
       setForm(initialState(defaultVisaType));
       setStatus({ state: 'success', message: 'Thanks! Our Dubai visa team will reach out shortly.' });
+
+      if (typeof window !== 'undefined') {
+        const conversionId = process.env.NEXT_PUBLIC_GA_CONTACT_CONVERSION_ID;
+
+        if (typeof window.gtag === 'function' && conversionId) {
+          window.gtag('event', 'conversion', { send_to: conversionId });
+        } else if (process.env.NODE_ENV !== 'production') {
+          console.warn('[LeadForm] gtag or conversion ID missing; conversion event not sent.');
+        }
+      }
     } catch (error) {
       setStatus({ state: 'error', message: error.message || 'Something went wrong. Please try again.' });
     } finally {
@@ -95,11 +127,6 @@ export default function LeadForm({ defaultVisaType = 'investor', smtpReady = tru
 
   return (
     <div className="w-full rounded-3xl border border-[#cfe2ff] bg-white p-6 shadow-xl lg:p-8">
-      {!smtpReady && (
-        <div className="mb-4 rounded-lg border border-[#8fc3ff] bg-[#f0f6ff] p-4 text-sm text-[#0b1f40]" role="alert">
-          Email delivery is not configured yet. Add SMTP environment variables to enable form submissions.
-        </div>
-      )}
 
       {status.state === 'success' && (
         <div
@@ -127,7 +154,7 @@ export default function LeadForm({ defaultVisaType = 'investor', smtpReady = tru
             type="text"
             value={form.fullName}
             onChange={handleChange}
-            className="mt-1 w-full rounded-lg border border-[#dbe9ff] bg-white px-4 py-3 text-sm shadow-sm focus:border-[#0074ff]"
+            className="mt-1 w-full rounded-lg border border-[#dbe9ff] bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-[#0074ff] placeholder:text-slate-400"
             required
             autoComplete="name"
           />
@@ -144,7 +171,7 @@ export default function LeadForm({ defaultVisaType = 'investor', smtpReady = tru
             type="email"
             value={form.email}
             onChange={handleChange}
-            className="mt-1 w-full rounded-lg border border-[#dbe9ff] bg-white px-4 py-3 text-sm shadow-sm focus:border-[#0074ff]"
+            className="mt-1 w-full rounded-lg border border-[#dbe9ff] bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-[#0074ff] placeholder:text-slate-400"
             required
             autoComplete="email"
           />
@@ -161,7 +188,7 @@ export default function LeadForm({ defaultVisaType = 'investor', smtpReady = tru
             type="tel"
             value={form.whatsapp}
             onChange={handleChange}
-            className="mt-1 w-full rounded-lg border border-[#dbe9ff] bg-white px-4 py-3 text-sm shadow-sm focus:border-[#0074ff]"
+            className="mt-1 w-full rounded-lg border border-[#dbe9ff] bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-[#0074ff] placeholder:text-slate-400"
             required
             autoComplete="tel"
             placeholder="e.g. +92 325 958 72"
@@ -178,7 +205,7 @@ export default function LeadForm({ defaultVisaType = 'investor', smtpReady = tru
             name="visaType"
             value={form.visaType}
             onChange={handleChange}
-            className="mt-1 w-full rounded-lg border border-[#dbe9ff] bg-white px-4 py-3 text-sm shadow-sm focus:border-[#0074ff]"
+            className="mt-1 w-full rounded-lg border border-[#dbe9ff] bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-[#0074ff] placeholder:text-slate-400"
           >
             {visaOptions.map((option) => (
               <option key={option.value} value={option.value}>
@@ -198,7 +225,7 @@ export default function LeadForm({ defaultVisaType = 'investor', smtpReady = tru
             rows={3}
             value={form.message}
             onChange={handleChange}
-            className="mt-1 w-full rounded-lg border border-[#dbe9ff] bg-white px-4 py-3 text-sm shadow-sm focus:border-[#0074ff]"
+          className="mt-1 w-full rounded-lg border border-[#dbe9ff] bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-[#0074ff] placeholder:text-slate-400"
             placeholder="Share any details, timelines, or questions."
           />
         </div>
