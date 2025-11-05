@@ -99,9 +99,12 @@ export const metadata = {
   },
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   icons: {
-    icon: '/CIPHERGLOBALLOGOsecond.png',
-    shortcut: '/CIPHERGLOBALLOGOsecond.png',
-    apple: '/CIPHERGLOBALLOGOsecond.png',
+    icon: [
+      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon.png', sizes: '192x192', type: 'image/png' },
+    ],
+    shortcut: '/icon.png',
+    apple: '/icon.png',
   },
 };
 

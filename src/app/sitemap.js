@@ -10,6 +10,8 @@ const routes = [
   'contact',
 ];
 
+export const dynamic = 'force-static';
+
 export default function sitemap() {
   const lastModified = new Date().toISOString();
   return routes.map((path) => ({
