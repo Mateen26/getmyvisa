@@ -77,22 +77,15 @@ export default function LeadForm({ defaultVisaType = 'investor' }) {
         throw new Error('Contact service is not configured.');
       }
 
-      const subjectLine = form.visaType ? `Visa enquiry: ${form.visaType}` : 'Visa enquiry';
-      const composedMessage = [
-        `WhatsApp: ${form.whatsapp}`,
-        `Visa type: ${form.visaType}`,
-        '',
-        form.message || 'No additional message provided.',
-      ].join('\n');
-
       const payload = {
         fullName: form.fullName,
         email: form.email,
-        message: composedMessage,
-        subject: subjectLine,
+        whatsappNumber: form.whatsapp,
+        visaType: form.visaType,
+        message: form.message || '',
       };
 
-      const response = await fetch(`${baseUrl}/user/send-contact-us`, {
+      const response = await fetch(`${baseUrl}/user/visa-contact-us`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
