@@ -22,6 +22,29 @@ export default function TermsPage() {
         <article className="space-y-6 rounded-3xl border border-[#cfe2ff] bg-white p-8 text-sm leading-relaxed text-slate-700">
           {termsText.split('\n\n').map((block) => {
             const lines = block.split('\n');
+            // Check if the first line is a section heading (starts with a number like "1. Acceptance of Terms")
+            const firstLineIsHeading = /^\d+\.\s+[A-Z]/.test(lines[0]);
+            
+            if (firstLineIsHeading) {
+              return (
+                <div key={block}>
+                  <h2 className="text-lg font-bold text-slate-900 mt-8 first:mt-0 mb-3">
+                    {lines[0]}
+                  </h2>
+                  {lines.slice(1).length > 0 && (
+                    <p className="text-slate-700">
+                      {lines.slice(1).map((line, index) => (
+                        <span key={index}>
+                          {line}
+                          {index < lines.slice(1).length - 1 && <br />}
+                        </span>
+                      ))}
+                    </p>
+                  )}
+                </div>
+              );
+            }
+            
             return (
               <p key={block} className="text-slate-700">
                 {lines.map((line, index) => (

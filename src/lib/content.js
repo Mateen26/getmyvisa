@@ -198,36 +198,36 @@ export const complianceDisclaimer = "We are not a government entity; UAE authori
 
 export const aboutCopy = `Cipher Global LLC is a UAE-registered consultancy that helps individuals and businesses navigate the path to Dubai residency, investment, and growth. We specialize in guiding clients through the Investor Visa and Tourist Visa processes — from documentation to approval — while ensuring every step is legal, transparent, and stress-free.
 
-🏛️ Our Story
+Our Story
 
 Cipher Global LLC was founded by professionals who personally went through the UAE Investor Visa journey. What started as one entrepreneur’s experience in building a new life and business in Dubai has grown into a trusted consultancy serving clients across Pakistan, the United States, and the Middle East.
 
 We understand the confusion, delays, and uncertainty people face when trying to secure their residency or business setup. That’s why we built Cipher Global — to simplify the process, remove the middlemen, and deliver real results, fast.
 
-🌍 What We Do
+What We Do
 
 • Investor Visa Assistance: Company formation, document processing, Emirates ID, and full residency setup.
 • Tourist Visa Processing: Fast and reliable short-stay visas for individuals and families.
 • Business Setup Advisory: Guidance on mainland, free zone, and Fawri license options for global entrepreneurs.
 • Document Preparation & Submission: End-to-end support to ensure your application is complete, accurate, and ready for approval.
 
-💼 Why Clients Choose Cipher Global
+Why Clients Choose Cipher Global
 
-✅ UAE Licensed & Registered
-✅ Fast & Transparent Processing
-✅ 100% Legal Residency & Business Pathways
-✅ End-to-End Document Handling
-✅ Personalized Consultation & Expert Guidance
+UAE Licensed & Registered
+Fast & Transparent Processing
+100% Legal Residency & Business Pathways
+End-to-End Document Handling
+Personalized Consultation & Expert Guidance
 
-🧭 Our Mission
+Our Mission
 
 To empower individuals and investors worldwide by making Dubai residency and business ownership accessible, legitimate, and straightforward.
 
-💬 Our Vision
+ Our Vision
 
 To become the most trusted global name in UAE residency and investment facilitation, recognized for transparency, expertise, and real client success.
 
-📞 Get in Touch
+ Get in Touch
 
 applications@getmyvisatoday.com
 USA: +1 (855) 200-4389

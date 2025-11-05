@@ -116,6 +116,8 @@ export default function Header() {
                 className={`rounded-full border px-3 py-1 text-sm font-medium shadow-sm transition duration-700 ease-in-out ${
                   action.label === 'Call'
                     ? 'border-transparent bg-[#0074ff] !text-white hover:bg-[#006ae6]'
+                    : action.label === 'WhatsApp'
+                    ? 'border-transparent bg-[#25d366] !text-white hover:bg-[#20be5a]'
                     : 'border-[#0074ff]/40 text-[#0074ff] hover:border-[#0074ff] hover:bg-[#0074ff]/10'
                 }`}
               >
@@ -176,6 +178,8 @@ export default function Header() {
               className={`rounded-full px-4 py-2 text-sm font-semibold transition duration-700 ease-in-out ${
                 action.label === 'Call'
                   ? 'border border-transparent bg-[#0074ff] text-white shadow-sm hover:bg-[#006ae6]'
+                  : action.label === 'WhatsApp'
+                  ? 'border border-transparent bg-[#25d366] text-white shadow-sm hover:bg-[#20be5a]'
                   : 'border border-[#0074ff]/40 text-[#0074ff] hover:border-[#0074ff] hover:bg-[#0074ff]/10'
               }`}
             >
@@ -192,7 +196,6 @@ export default function Header() {
         }`}
         aria-hidden={!menuOpen}
       >
-yoremobileclasses
         <nav className={`flex flex-col gap-2 py-4 text-sm font-semibold transition-opacity duration-300 ${menuOpen ? 'opacity-100' : 'opacity-0'}`}>
           {navigationLinks.map((link) => (
             <Link

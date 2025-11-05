@@ -43,12 +43,7 @@ export default function ContactPage() {
                 </p>
               </div>
             </div>
-            <div className="overflow-hidden rounded-2xl border border-[#cfe2ff] bg-white">
-              <div className="h-64 w-full bg-[url('https://images.unsplash.com/photo-1502920917128-1aa500764b81?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center" aria-hidden />
-              <div className="p-4 text-xs text-slate-500">
-                Map placeholder — swap with an embedded map once location is finalized.
-              </div>
-            </div>
+           
           </div>
         </div>
       </section>

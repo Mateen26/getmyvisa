@@ -24,6 +24,17 @@ export default function AboutPage() {
           <article className="space-y-6 text-sm leading-relaxed text-slate-700">
             {aboutCopy.split('\n\n').map((block) => {
               const lines = block.split('\n');
+              // Check if this is a heading (short line, no bullet points, not the first paragraph)
+              const isHeading = lines.length === 1 && lines[0].length < 50 && !lines[0].startsWith('•') && !lines[0].startsWith('Cipher Global LLC is');
+              
+              if (isHeading) {
+                return (
+                  <h2 key={block} className="text-lg font-bold text-slate-900 mt-8 first:mt-0">
+                    {lines[0]}
+                  </h2>
+                );
+              }
+              
               return (
                 <p key={block} className="text-slate-700">
                   {lines.map((line, index) => (
