@@ -98,6 +98,11 @@ export const metadata = {
     canonical: '/',
   },
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  icons: {
+    icon: '/CIPHERGLOBALLOGOsecond.png',
+    shortcut: '/CIPHERGLOBALLOGOsecond.png',
+    apple: '/CIPHERGLOBALLOGOsecond.png',
+  },
 };
 
 const analyticsSnippet = process.env.NEXT_PUBLIC_ANALYTICS_SNIPPET;
