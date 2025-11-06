@@ -37,7 +37,7 @@ const options = [
     id: 'tourist',
     badge: 'Fast Stays',
     title: 'Tourist Visa',
-    description: 'Need 14, 30, 60, or 90 days? Get a reliable UAE tourist visa with quick turnaround and airline-ready paperwork.',
+    description: 'Need 30 or 60 days? Get a reliable UAE tourist visa with quick turnaround and airline-ready paperwork.',
     points: [
       'Approvals in as little as 24 hours',
       'Families and solo travelers welcome',

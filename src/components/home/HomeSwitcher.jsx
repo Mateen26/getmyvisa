@@ -158,27 +158,7 @@ export default function HomeSwitcher({
         </div>
       </section>
 
-      {!isInvestor && (
-        <section id="white-content-start" className="bg-white">
-          <div className="mx-auto max-w-7xl px-4 py-10">
-            <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-semibold text-[#0b1f40] md:justify-between">
-              {trustBadges.map((badge, index) => (
-                <div
-                  key={badge}
-                  className="flex items-center gap-2 rounded-full border border-[#cfe2ff] bg-[#f0f6ff] px-4 py-2"
-                  data-animate="fade-up"
-                  style={{ transitionDelay: `${index * 60}ms` }}
-                >
-                  <span className="h-2 w-2 rounded-full bg-[#0074ff]" aria-hidden />
-                  {badge}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      <section id={isInvestor ? 'white-content-start' : ''} className="bg-neutral-50">
+      <section id="white-content-start" className="bg-neutral-50">
         <div className="mx-auto max-w-7xl px-4 py-16">
           {isInvestor ? (
             <InvestorView content={investorContent} />
