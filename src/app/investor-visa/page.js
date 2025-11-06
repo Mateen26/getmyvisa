@@ -2,14 +2,10 @@ import BenefitsGrid from '@/components/BenefitsGrid';
 import ContactBlock from '@/components/ContactBlock';
 import FAQ from '@/components/FAQ';
 import LeadForm from '@/components/LeadForm';
-import PreApprovalCard from '@/components/PreApprovalCard';
 import Timeline from '@/components/Timeline';
 import {
   investorAdvantages,
   investorFaq,
-  investorPreApprovalAdvantages,
-  investorPreApprovalChecklist,
-  investorRequirements,
   investorSuggestedCopy,
   investorTimeline,
   siteConfig,
@@ -42,7 +38,7 @@ export default function InvestorVisaPage() {
               <a className="rounded-full bg-[#006ae6] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#005bcc]" href={siteConfig.phoneHref}>
                 Call
               </a>
-              <a className="rounded-full bg-[#25d366] px-6 py-3 text-sm font-semibold text-[#0b1f40] shadow-md transition hover:bg-[#20be5a]" href={siteConfig.whatsappHref}>
+              <a className="rounded-full bg-[#25d366] px-6 py-3 text-sm font-semibold text-[#0b1f40] shadow-md transition hover:bg-[#20be5a]" href={siteConfig.whatsapp1Href}>
                 WhatsApp
               </a>
             </div>
@@ -61,41 +57,9 @@ export default function InvestorVisaPage() {
           </div>
 
           <div>
-            <h3 className="text-xl font-semibold text-[#0b1f40]">Pre-Approval Advantages</h3>
-            <div className="mt-4 grid gap-4 md:grid-cols-2">
-              {investorPreApprovalAdvantages.map((item) => (
-                <div key={item} className="rounded-xl border border-[#cfe2ff] bg-white p-5 text-sm text-slate-700 shadow-sm">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <PreApprovalCard
-            title="Pre-Approval — Required Now"
-            description="Submit these documents today to fast-track your residency."
-            documents={investorPreApprovalChecklist}
-          />
-
-          <div className="grid gap-12 lg:grid-cols-[1.2fr_0.8fr]">
-            <div>
-              <h3 className="text-xl font-semibold text-[#0b1f40]">Investor Requirements</h3>
-              <ul className="mt-4 space-y-3 text-sm text-slate-700">
-                {investorRequirements.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#0074ff] text-sm font-semibold text-white">
-                      ✓
-                    </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-[#0b1f40]">Process Timeline</h3>
-              <div className="mt-4 rounded-2xl border border-[#cfe2ff] bg-white p-6 shadow-sm">
-                <Timeline steps={investorTimeline} />
-              </div>
+            <h3 className="text-xl font-semibold text-[#0b1f40]">Process Timeline</h3>
+            <div className="mt-4 rounded-2xl border border-[#cfe2ff] bg-white p-6 shadow-sm">
+              <Timeline steps={investorTimeline} />
             </div>
           </div>
 
@@ -133,7 +97,7 @@ export default function InvestorVisaPage() {
                 <a className="rounded-full bg-[#006ae6] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#005bcc]" href={siteConfig.phoneHref}>
                   Call
                 </a>
-                <a className="rounded-full bg-[#25d366] px-6 py-3 text-sm font-semibold text-[#0b1f40] shadow-md transition hover:bg-[#20be5a]" href={siteConfig.whatsappHref}>
+                <a className="rounded-full bg-[#25d366] px-6 py-3 text-sm font-semibold text-[#0b1f40] shadow-md transition hover:bg-[#20be5a]" href={siteConfig.whatsapp1Href}>
                   WhatsApp
                 </a>
               </div>

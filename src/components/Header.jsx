@@ -17,7 +17,7 @@ const contactActions = [
   },
   {
     label: 'WhatsApp',
-    href: siteConfig.whatsappHref,
+    href: siteConfig.whatsapp1Href,
   },
 ];
 

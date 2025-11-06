@@ -37,7 +37,7 @@ export default function TouristVisaPage() {
               <a className="rounded-full bg-[#006ae6] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#005bcc]" href={siteConfig.phoneHref}>
                 Call
               </a>
-              <a className="rounded-full bg-[#25d366] px-6 py-3 text-sm font-semibold text-[#0b1f40] shadow-md transition hover:bg-[#20be5a]" href={siteConfig.whatsappHref}>
+              <a className="rounded-full bg-[#25d366] px-6 py-3 text-sm font-semibold text-[#0b1f40] shadow-md transition hover:bg-[#20be5a]" href={siteConfig.whatsapp1Href}>
                 WhatsApp
               </a>
             </div>
@@ -55,12 +55,18 @@ export default function TouristVisaPage() {
                   <div key={duration.title} className="rounded-2xl border border-[#cfe2ff] bg-white p-5 shadow-sm">
                     <p className="text-lg font-semibold text-[#0b1f40]">{duration.title}</p>
                     <p className="mt-2 text-sm text-slate-600">{duration.description}</p>
+                    {duration.price && (
+                      <p className="mt-3 text-xl font-bold text-[#0074ff]">{duration.price}</p>
+                    )}
                     <a className="mt-4 inline-flex items-center text-sm font-semibold text-[#0074ff]! hover:text-[#005bcc]" href="#tourist-lead">
                       Apply Now →
                     </a>
                   </div>
                 ))}
               </div>
+              <p className="mt-6 text-xs leading-relaxed text-slate-600">
+                <strong className="text-slate-900">Disclaimer:</strong> All fees shown above include both UAE government processing charges and our service fee for managing the application. Prices are subject to change without prior notice and are based on current immigration and administrative costs. While we assist throughout the process, final visa approval is solely determined by UAE immigration authorities, and service portions of the fees are non-refundable once submission has begun.
+              </p>
             </div>
             <div id="tourist-lead" className="self-start">
               <LeadForm defaultVisaType="tourist" />
@@ -112,7 +118,7 @@ export default function TouristVisaPage() {
                 <a className="rounded-full bg-[#006ae6] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#005bcc]" href={siteConfig.phoneHref}>
                   Call
                 </a>
-                <a className="rounded-full bg-[#25d366] px-6 py-3 text-sm font-semibold text-[#0b1f40] shadow-md transition hover:bg-[#20be5a]" href={siteConfig.whatsappHref}>
+                <a className="rounded-full bg-[#25d366] px-6 py-3 text-sm font-semibold text-[#0b1f40] shadow-md transition hover:bg-[#20be5a]" href={siteConfig.whatsapp1Href}>
                   WhatsApp
                 </a>
               </div>

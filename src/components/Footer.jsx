@@ -58,11 +58,15 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a className="transition text-black hover:text-[#0074ff]" href={siteConfig.whatsappHref}>
-                  WhatsApp: {siteConfig.whatsapp}
+                <a className="transition text-black hover:text-[#0074ff]" href={siteConfig.whatsapp1Href}>
+                  WhatsApp: {siteConfig.whatsapp1}
                 </a>
               </li>
-              <li className="text-slate-600">Hours: {siteConfig.hours}</li>
+              <li>
+                <a className="transition text-black hover:text-[#0074ff]" href={siteConfig.whatsapp2Href}>
+                  WhatsApp: {siteConfig.whatsapp2}
+                </a>
+              </li>
             </ul>
           </div>
 

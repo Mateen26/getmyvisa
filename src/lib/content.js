@@ -5,10 +5,11 @@ export const siteConfig = {
   email: "applications@getmyvisatoday.com",
   phone: "+1 (855) 200-4389",
   phoneHref: "tel:+18552004389",
-  whatsapp: "+92 325 958 72",
-  whatsappHref: "https://wa.me/9232595872",
+  whatsapp1: "+92 305 729 6234",
+  whatsapp1Href: "https://wa.me/923057296234",
+  whatsapp2: "+92 326 847 3203",
+  whatsapp2Href: "https://wa.me/923268473203",
   locationTagline: "UAE-registered consultancy. Not a government entity.",
-  hours: "Mon–Sat: 9am–7pm UAE",
 };
 
 export const navigationLinks = [
@@ -30,15 +31,13 @@ export const trustBadges = [
 ];
 
 export const investorAdvantages = [
-  "Long-term residency — Live and build your business in the UAE.",
-  "Family sponsorship — Bring spouse, children (often parents).",
-  "100% business ownership — Especially in top free zones.",
-  "Access to UAE banking & ecosystem — Open accounts, operate freely.",
-  "Tax advantages — Low/no personal income tax; repatriate profits.",
-  "Flexible work & business rights — Own/manage your venture.",
-  "Strategic location — Gateway to MEA & Asia.",
-  "High standard of living & safety.",
-  "Path to longer-term visas (incl. Golden Visa).",
+  "100% foreign ownership",
+  "Simplified customs procedures",
+  "Easy company set-up and registration process",
+  "No tax on corporate profits or personal income",
+  "Access to advanced infrastructure and facilities",
+  "No customs duty on imports or exports",
+  "Business-friendly environment and regulations",
 ];
 
 export const investorPreApprovalChecklist = [
@@ -65,20 +64,16 @@ export const investorPreApprovalAdvantages = [
 
 export const investorTimeline = [
   {
-    title: "Submit Documents",
-    description: "Share scans of your passport, photo, and business intent.",
+    title: "Application",
+    description: "An application is submitted for the registration of company",
   },
   {
-    title: "Application Review",
-    description: "Consultants verify compliance and secure initial approvals.",
+    title: "Documentation",
+    description: "Submission of documents and signing of application forms",
   },
   {
-    title: "Business Registration & Visa Processing",
-    description: "We register your entity, initiate visa issuance, and schedule biometrics.",
-  },
-  {
-    title: "Residency Approval & Emirates ID",
-    description: "Receive entry permit, complete medicals, and collect Emirates ID.",
+    title: "Registered",
+    description: "Company registration and formation is complete",
   },
 ];
 
@@ -124,26 +119,55 @@ export const investorFaq = [
 
 export const touristDurations = [
   {
-    title: "14-Day Visa",
-    description: "Perfect for express visits, business scouting, or short family trips.",
+    title: "30 Days Single Entry Tourist Visa",
+    description: "Perfect for leisure travelers and short family trips.",
+    price: "AED 846",
   },
   {
-    title: "30-Day Visa",
-    description: "The most popular stay for leisure travelers wanting a longer holiday.",
+    title: "30 Days Child Visa",
+    description: "Tourist visa for children under 18.",
+    price: "AED 651",
   },
   {
-    title: "60-Day Visa",
-    description: "Extra time to explore opportunities, attend events, or visit relatives.",
+    title: "60 Days Single Entry Tourist Visa",
+    description: "Extended stay for exploring opportunities and events.",
+    price: "AED 1,041",
   },
   {
-    title: "90-Day Visa",
-    description: "Ideal for extended stays, relocations-in-progress, or multi-entry travel.",
+    title: "60 Days Single Entry Child",
+    description: "Extended tourist visa for children under 18.",
+    price: "AED 781",
+  },
+  {
+    title: "30 Days Multiple Entry Tourist Visa",
+    description: "Multiple entries for frequent travelers within 30 days.",
+    price: "AED 1,171",
+  },
+  {
+    title: "30 Days Multiple Entry Child Visa",
+    description: "Multiple entry visa for children under 18.",
+    price: "AED 911",
+  },
+  {
+    title: "60 Days Multiple Entry Tourist Visa",
+    description: "Multiple entries for extended stays and business trips.",
+    price: "AED 1,497",
+  },
+  {
+    title: "60 Days Multiple Entry Child",
+    description: "Multiple entry extended visa for children under 18.",
+    price: "AED 1,041",
   },
 ];
 
 export const touristRequirements = [
-  "Passport copy",
-  "Recent passport-size photo (white background)",
+  "Passport size Photograph (white background)",
+  "Passport front page",
+  "Passport last page",
+  "Passport page with exit stamp, if you've visited Dubai before",
+  "Confirmed return air tickets",
+  "Confirmed hotel booking",
+  "Bank statements up to 6 Months",
 ];
 
 export const touristTimeline = [

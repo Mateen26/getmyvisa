@@ -145,7 +145,7 @@ export default function HomeSwitcher({
                 Call
               </a>
               <a
-                href={siteConfig.whatsappHref}
+                href={siteConfig.whatsapp1Href}
                 className="rounded-full bg-[#25d366] px-6 py-3 text-sm font-semibold text-[#0b1f40] shadow-md transition hover:bg-[#20be5a]"
               >
                 WhatsApp
@@ -158,25 +158,27 @@ export default function HomeSwitcher({
         </div>
       </section>
 
-      <section id="white-content-start" className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-10">
-          <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-semibold text-[#0b1f40] md:justify-between">
-            {trustBadges.map((badge, index) => (
-              <div
-                key={badge}
-                className="flex items-center gap-2 rounded-full border border-[#cfe2ff] bg-[#f0f6ff] px-4 py-2"
-                data-animate="fade-up"
-                style={{ transitionDelay: `${index * 60}ms` }}
-              >
-                <span className="h-2 w-2 rounded-full bg-[#0074ff]" aria-hidden />
-                {badge}
-              </div>
-            ))}
+      {!isInvestor && (
+        <section id="white-content-start" className="bg-white">
+          <div className="mx-auto max-w-7xl px-4 py-10">
+            <div className="flex flex-wrap items-center justify-center gap-4 text-sm font-semibold text-[#0b1f40] md:justify-between">
+              {trustBadges.map((badge, index) => (
+                <div
+                  key={badge}
+                  className="flex items-center gap-2 rounded-full border border-[#cfe2ff] bg-[#f0f6ff] px-4 py-2"
+                  data-animate="fade-up"
+                  style={{ transitionDelay: `${index * 60}ms` }}
+                >
+                  <span className="h-2 w-2 rounded-full bg-[#0074ff]" aria-hidden />
+                  {badge}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
-      <section className="bg-neutral-50">
+      <section id={isInvestor ? 'white-content-start' : ''} className="bg-neutral-50">
         <div className="mx-auto max-w-7xl px-4 py-16">
           {isInvestor ? (
             <InvestorView content={investorContent} />
@@ -238,7 +240,7 @@ export default function HomeSwitcher({
             <a className="rounded-full bg-[#006ae6] px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-[#005bcc] hover:scale-105" href={siteConfig.phoneHref}>
               Call
             </a>
-            <a className="rounded-full bg-[#25d366] px-6 py-3 text-sm font-semibold text-[#0b1f40] shadow-md transition-all hover:bg-[#20be5a] hover:scale-105" href={siteConfig.whatsappHref}>
+            <a className="rounded-full bg-[#25d366] px-6 py-3 text-sm font-semibold text-[#0b1f40] shadow-md transition-all hover:bg-[#20be5a] hover:scale-105" href={siteConfig.whatsapp1Href}>
               WhatsApp
             </a>
           </div>
@@ -267,53 +269,9 @@ function InvestorView({ content }) {
       </div>
 
       <div data-animate="fade-up">
-        <h3 className="text-xl font-semibold text-[#0b1f40]">Pre-Approval Advantages</h3>
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
-          {content.preApprovalAdvantages.map((item, index) => (
-            <div
-              key={item}
-              className="rounded-xl border border-[#cfe2ff] bg-white p-4 text-sm text-slate-700 shadow-sm"
-              data-animate="fade-up"
-              style={{ transitionDelay: `${index * 80}ms` }}
-            >
-              {item}
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div data-animate="fade-up">
-        <PreApprovalCard
-          title="Pre-Approval — Required Now"
-          description="Secure your investor visa faster with these essentials."
-          documents={content.preApprovalChecklist}
-        />
-      </div>
-
-      <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
-        <div data-animate="fade-right">
-          <h3 className="text-xl font-semibold text-[#0b1f40]">Requirements</h3>
-          <ul className="mt-4 space-y-3 text-sm text-slate-700">
-            {content.requirements.map((item, index) => (
-              <li
-                key={item}
-                className="flex items-start gap-3"
-                data-animate="fade-up"
-                style={{ transitionDelay: `${index * 60}ms` }}
-              >
-                <span className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#0074ff] text-sm font-semibold text-white">
-                  ✓
-                </span>
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div data-animate="fade-left">
-          <h3 className="text-xl font-semibold text-[#0b1f40]">Process Timeline</h3>
-          <div className="mt-4 rounded-2xl border border-[#cfe2ff] bg-white p-6 shadow-sm">
-            <Timeline steps={content.timeline} />
-          </div>
+        <h3 className="text-xl font-semibold text-[#0b1f40]">Process Timeline</h3>
+        <div className="mt-4 rounded-2xl border border-[#cfe2ff] bg-white p-6 shadow-sm">
+          <Timeline steps={content.timeline} />
         </div>
       </div>
 
@@ -352,7 +310,7 @@ function InvestorView({ content }) {
           <a className="rounded-full bg-[#006ae6] px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-[#005bcc] hover:scale-105" href={siteConfig.phoneHref}>
             Call
           </a>
-          <a className="rounded-full bg-[#25d366] px-6 py-3 text-sm font-semibold text-[#0b1f40] shadow-md transition-all hover:bg-[#20be5a] hover:scale-105" href={siteConfig.whatsappHref}>
+          <a className="rounded-full bg-[#25d366] px-6 py-3 text-sm font-semibold text-[#0b1f40] shadow-md transition-all hover:bg-[#20be5a] hover:scale-105" href={siteConfig.whatsapp1Href}>
             WhatsApp
           </a>
         </div>
@@ -376,12 +334,18 @@ function TouristView({ content }) {
             >
               <p className="text-lg font-semibold text-[#0b1f40]">{duration.title}</p>
               <p className="mt-2 text-sm text-slate-600">{duration.description}</p>
+              {duration.price && (
+                <p className="mt-3 text-xl font-bold text-[#0074ff]">{duration.price}</p>
+              )}
               <a className="mt-4 inline-flex items-center text-sm font-semibold text-[#0074ff] hover:text-[#005bcc]" href="#lead-form">
                 Apply Now →
               </a>
             </div>
           ))}
         </div>
+        <p className="mt-6 text-xs leading-relaxed text-slate-600" data-animate="fade-up">
+          <strong className="text-slate-900">Disclaimer:</strong> All fees shown above include both UAE government processing charges and our service fee for managing the application. Prices are subject to change without prior notice and are based on current immigration and administrative costs. While we assist throughout the process, final visa approval is solely determined by UAE immigration authorities, and service portions of the fees are non-refundable once submission has begun.
+        </p>
       </div>
 
       <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
@@ -433,7 +397,7 @@ function TouristView({ content }) {
           <a className="rounded-full bg-[#006ae6] px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-[#005bcc] hover:scale-105" href={siteConfig.phoneHref}>
             Call
           </a>
-          <a className="rounded-full bg-[#25d366] px-6 py-3 text-sm font-semibold text-[#0b1f40] shadow-md transition-all hover:bg-[#20be5a] hover:scale-105" href={siteConfig.whatsappHref}>
+          <a className="rounded-full bg-[#25d366] px-6 py-3 text-sm font-semibold text-[#0b1f40] shadow-md transition-all hover:bg-[#20be5a] hover:scale-105" href={siteConfig.whatsapp1Href}>
             WhatsApp
           </a>
         </div>

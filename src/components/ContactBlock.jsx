@@ -19,12 +19,16 @@ export default function ContactBlock({ className = '' }) {
           </a>
         </li>
         <li>
-          <a className="transition hover:text-[#0074ff]" href={siteConfig.whatsappHref}>
-            WhatsApp: {siteConfig.whatsapp}
+          <a className="transition hover:text-[#0074ff]" href={siteConfig.whatsapp1Href}>
+            WhatsApp: {siteConfig.whatsapp1}
+          </a>
+        </li>
+        <li>
+          <a className="transition hover:text-[#0074ff]" href={siteConfig.whatsapp2Href}>
+            WhatsApp: {siteConfig.whatsapp2}
           </a>
         </li>
       </ul>
-      <p className="mt-4 text-xs uppercase tracking-wide text-[#4a7abf]">{siteConfig.hours}</p>
     </div>
   );
 }

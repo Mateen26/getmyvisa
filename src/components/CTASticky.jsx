@@ -25,7 +25,7 @@ export default function CTASticky({ targetId = 'lead-form' }) {
             Apply Now
           </button>
           <a
-            href={siteConfig.whatsappHref}
+            href={siteConfig.whatsapp1Href}
             className="flex-1 rounded-full border border-[#dbe9ff] px-4 py-2 text-center text-sm font-semibold text-[#0b1f40] transition hover:border-[#b3d9ff] hover:bg-[#f0f6ff]"
           >
             WhatsApp
