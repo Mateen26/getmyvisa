@@ -1,4 +1,4 @@
-import { siteConfig, termsText } from '@/lib/content';
+import {termsText } from '@/lib/content';
 
 export const metadata = {
   title: 'Terms & Conditions | Cipher Global LLC',
@@ -56,7 +56,7 @@ export default function TermsPage() {
               </p>
             );
           })}
-          <p className="mt-8 text-xs uppercase tracking-wide text-[#4a7abf]">{siteConfig.locationTagline}</p>
+          {/* <p className="mt-8 text-xs uppercase tracking-wide text-[#4a7abf]">{siteConfig.locationTagline}</p> */}
         </article>
       </section>
     </div>

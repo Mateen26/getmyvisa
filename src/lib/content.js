@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "Cipher Global LLC",
   tagline: "Building Your Bridge to Dubai",
   url: "https://www.getmyvisatoday.com",
-  email: "applications@getmyvisatoday.com",
+  email: "support@myvisatoday.com",
   phone: "+1 (855) 200-4389",
   phoneHref: "tel:+18552004389",
   whatsapp1: "+92 305 729 6234",

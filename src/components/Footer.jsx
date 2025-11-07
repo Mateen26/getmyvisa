@@ -24,7 +24,7 @@ export default function Footer() {
             <p className="mt-4 max-w-xs text-sm text-slate-600">
               {siteConfig.tagline}
             </p>
-            <p className="mt-4 text-sm text-slate-600">{siteConfig.locationTagline}</p>
+            {/* <p className="mt-4 text-sm text-slate-600">{siteConfig.locationTagline}</p> */}
           </div>
 
           <div className="md:col-span-1">

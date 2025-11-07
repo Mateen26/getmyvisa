@@ -1,5 +1,5 @@
 import ContactBlock from '@/components/ContactBlock';
-import { aboutCopy, siteConfig } from '@/lib/content';
+import { aboutCopy } from '@/lib/content';
 
 export const metadata = {
   title: 'About Cipher Global LLC',
@@ -54,7 +54,7 @@ export default function AboutPage() {
               <p className="mt-2">
                 Cipher Global LLC is a UAE-registered consultancy delivering compliant investor and tourist visa support, business setup advisory, and hands-on documentation assistance.
               </p>
-              <p className="mt-2 text-xs uppercase tracking-wide text-[#4a7abf]">{siteConfig.locationTagline}</p>
+              {/* <p className="mt-2 text-xs uppercase tracking-wide text-[#4a7abf]">{siteConfig.locationTagline}</p> */}
             </div>
           </aside>
         </div>

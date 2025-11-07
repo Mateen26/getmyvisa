@@ -1,4 +1,4 @@
-import { refundPolicyText, siteConfig } from '@/lib/content';
+import { refundPolicyText } from '@/lib/content';
 
 export const metadata = {
   title: 'Refund Policy | Cipher Global LLC',
@@ -56,7 +56,7 @@ export default function RefundPolicyPage() {
               </p>
             );
           })}
-          <p className="mt-8 text-xs uppercase tracking-wide text-[#4a7abf]">{siteConfig.locationTagline}</p>
+          {/* <p className="mt-8 text-xs uppercase tracking-wide text-[#4a7abf]">{siteConfig.locationTagline}</p> */}
         </article>
       </section>
     </div>
