@@ -173,7 +173,7 @@ export default function LeadForm({ defaultVisaType = 'investor' }) {
 
         <div>
           <label className="block text-sm font-semibold text-[#0b1f40]" htmlFor="whatsapp">
-            WhatsApp Number
+            Phone Number
           </label>
           <input
             id="whatsapp"

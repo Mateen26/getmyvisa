@@ -13,7 +13,7 @@ export default function SplitSelector({ options, active, onChange }) {
             aria-pressed={isActive}
             className={`flex flex-col gap-3 rounded-2xl border-2 px-6 py-6 text-left transition cursor-pointer ${
               isActive
-                ? 'border-[#0074ff] bg-[#0074ff] text-white shadow-lg'
+                ? 'border-[#066dec] bg-[#046ae8] text-white shadow-lg rounded-4xl'
                 : 'border-[#dbe9ff] bg-white text-slate-900 hover:border-[#b3d9ff] hover:shadow-md'
             }`}
           >

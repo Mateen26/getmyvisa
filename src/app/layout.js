@@ -109,6 +109,7 @@ export const metadata = {
 };
 
 const analyticsSnippet = process.env.NEXT_PUBLIC_ANALYTICS_SNIPPET;
+const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
 
 export default function RootLayout({ children }) {
   return (
@@ -134,6 +135,30 @@ export default function RootLayout({ children }) {
         <Header />
         <main className="min-h-screen bg-neutral-50 overflow-x-hidden">{children}</main>
         <Footer />
+        
+        {/* Google Ads Tag */}
+        {googleAdsId && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`}
+              strategy="afterInteractive"
+            />
+            <Script
+              id="google-ads"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${googleAdsId}');
+                `,
+              }}
+            />
+          </>
+        )}
+        
+        {/* Tawk.to Chat */}
         <Script
           id="tawk-to"
           strategy="afterInteractive"
