@@ -78,9 +78,17 @@ export default function Footer() {
           </div> */}
         </div>
 
-        <div className="mt-12 border-t border-slate-200 pt-6 text-sm text-slate-600 text-center">
-          <p>© {year} {siteConfig.name}. All rights reserved.</p>
-          <p>Licensed in Dubai, UAE</p>
+        <div className="mt-12 border-t border-slate-200 pt-6 text-sm text-slate-600">
+          <div className="mb-6 text-xs leading-relaxed">
+            <p className="font-semibold text-slate-900 mb-2">Disclaimer:</p>
+            <p>
+              MyVisaToday.com is a service platform operated under Cipher Global LLC, a licensed consultancy based in Dubai, UAE. All visa-related information provided on this website is intended for general guidance and informational purposes only. Cipher Global LLC and MyVisaToday.com do not represent or affiliate with any government authority and are not responsible for any changes in immigration laws, fees, or approval decisions made by official entities.
+            </p>
+          </div>
+          <div className="text-center">
+            <p>© {year} {siteConfig.name}. All rights reserved.</p>
+            <p>Licensed in Dubai, UAE</p>
+          </div>
         </div>
       </div>
     </footer>
