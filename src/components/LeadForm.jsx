@@ -103,7 +103,8 @@ export default function LeadForm({ defaultVisaType = 'investor' }) {
       setStatus({ state: 'success', message: 'Thanks! Our Dubai visa team will reach out shortly.' });
 
       if (typeof window !== 'undefined') {
-        const conversionId = process.env.NEXT_PUBLIC_GA_CONTACT_CONVERSION_ID;
+        const conversionId =
+          process.env.NEXT_PUBLIC_GA_CONTACT_CONVERSION_ID ;
 
         if (typeof window.gtag === 'function' && conversionId) {
           window.gtag('event', 'conversion', { send_to: conversionId });
@@ -218,7 +219,7 @@ export default function LeadForm({ defaultVisaType = 'investor' }) {
             rows={3}
             value={form.message}
             onChange={handleChange}
-          className="mt-1 w-full rounded-lg border border-[#dbe9ff] bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-[#0074ff] placeholder:text-slate-400"
+            className="mt-1 w-full rounded-lg border border-[#dbe9ff] bg-white px-4 py-3 text-sm text-slate-900 shadow-sm focus:border-[#0074ff] placeholder:text-slate-400"
             placeholder="Share any details, timelines, or questions."
           />
         </div>

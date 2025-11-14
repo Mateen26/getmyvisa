@@ -110,6 +110,16 @@ export const metadata = {
 
 const analyticsSnippet = process.env.NEXT_PUBLIC_ANALYTICS_SNIPPET;
 const googleAdsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
+const googleAdsAdditionalIds = process.env.NEXT_PUBLIC_GOOGLE_ADS_ADDITIONAL_IDS
+  ? process.env.NEXT_PUBLIC_GOOGLE_ADS_ADDITIONAL_IDS.split(',')
+      .map((value) => value.trim())
+      .filter(Boolean)
+  : [];
+const googleAdsConfigIds = [googleAdsId, ...googleAdsAdditionalIds].filter(Boolean);
+const googleAdsLoaderId = googleAdsConfigIds[0];
+const googleAdsConfigScript = googleAdsConfigIds
+  .map((id) => `gtag('config', '${id}');`)
+  .join('\n');
 
 export default function RootLayout({ children }) {
   return (
@@ -137,10 +147,10 @@ export default function RootLayout({ children }) {
         <Footer />
         
         {/* Google Ads Tag */}
-        {googleAdsId && (
+        {googleAdsLoaderId && (
           <>
             <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${googleAdsLoaderId}`}
               strategy="afterInteractive"
             />
             <Script
@@ -151,7 +161,7 @@ export default function RootLayout({ children }) {
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
-                  gtag('config', '${googleAdsId}');
+                  ${googleAdsConfigScript}
                 `,
               }}
             />
