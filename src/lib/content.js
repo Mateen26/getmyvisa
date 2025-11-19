@@ -5,9 +5,9 @@ export const siteConfig = {
   email: "support@myvisatoday.com",
   phone: "+1 (855) 200-4389",
   phoneHref: "tel:+18552004389",
-  whatsapp1: "+92 305 729 6234",
+  whatsapp1: "+92 326 847 3203",
   whatsapp1Href: "https://wa.me/923057296234",
-  whatsapp2: "+92 326 847 3203",
+  whatsapp2: "+92 305 729 6234",
   whatsapp2Href: "https://wa.me/923268473203",
   locationTagline: "UAE-registered consultancy. Not a government entity.",
 };

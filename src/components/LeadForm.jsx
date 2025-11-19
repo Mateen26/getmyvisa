@@ -104,7 +104,7 @@ export default function LeadForm({ defaultVisaType = 'investor' }) {
 
       if (typeof window !== 'undefined') {
         const conversionId =
-          process.env.NEXT_PUBLIC_GA_CONTACT_CONVERSION_ID ;
+          process.env.NEXT_PUBLIC_GA_CONTACT_CONVERSION_ID;
 
         if (typeof window.gtag === 'function' && conversionId) {
           window.gtag('event', 'conversion', { send_to: conversionId });

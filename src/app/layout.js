@@ -117,9 +117,14 @@ const googleAdsAdditionalIds = process.env.NEXT_PUBLIC_GOOGLE_ADS_ADDITIONAL_IDS
   : [];
 const googleAdsConfigIds = [googleAdsId, ...googleAdsAdditionalIds].filter(Boolean);
 const googleAdsLoaderId = googleAdsConfigIds[0];
-const googleAdsConfigScript = googleAdsConfigIds
-  .map((id) => `gtag('config', '${id}');`)
-  .join('\n');
+const googleAdsConfigScript = `
+  const gtagDebug =
+    typeof window !== 'undefined' &&
+    new URLSearchParams(window.location.search).has('gtm_debug');
+${googleAdsConfigIds
+  .map((id) => `  gtag('config', '${id}', gtagDebug ? { debug_mode: true } : {});`)
+  .join('\n')}
+`;
 
 export default function RootLayout({ children }) {
   return (
