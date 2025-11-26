@@ -50,15 +50,11 @@ export default function TouristVisaPage() {
           <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="space-y-6">
               <h2 className="text-3xl font-semibold text-[#0b1f40]">UAE Travel & Entry Support — Choose Your Service</h2>
-              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
+              <div className="flex flex-col gap-4">
                 {touristDurations.map((duration) => (
-                  <div key={duration.title} className="rounded-2xl border border-[#cfe2ff] bg-white p-5 shadow-sm">
+                  <div key={duration.title} className="flex items-center justify-between rounded-2xl border border-[#cfe2ff] bg-white p-5 shadow-sm">
                     <p className="text-lg font-semibold text-[#0b1f40]">{duration.title}</p>
-                    <p className="mt-2 text-sm text-slate-600">{duration.description}</p>
-                    {duration.price && (
-                      <p className="mt-3 text-xl font-bold text-[#0074ff]">{duration.price}</p>
-                    )}
-                    <a className="mt-4 inline-flex items-center text-sm font-semibold text-[#0074ff]! hover:text-[#005bcc]" href="#tourist-lead">
+                    <a className="inline-flex items-center text-sm font-semibold text-[#0074ff]! hover:text-[#005bcc]" href="#tourist-lead">
                       Get Support →
                     </a>
                   </div>

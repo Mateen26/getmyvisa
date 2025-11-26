@@ -118,42 +118,42 @@ export const investorFaq = [
 
 export const touristDurations = [
   {
-    title: "30 Days Single Entry — Support Service",
+    title: "30 Days Single Entry",
     description: "Structured assistance for preparing your UAE entry documents.",
     price: "AED 846",
   },
   {
-    title: "30 Days Child — Support Service",
+    title: "30 Days Child",
     description: "Structured assistance for preparing your UAE entry documents.",
     price: "AED 651",
   },
   {
-    title: "60 Days Single Entry — Support Service",
+    title: "60 Days Single Entry",
     description: "Structured assistance for preparing your UAE entry documents.",
     price: "AED 1,041",
   },
   {
-    title: "60 Days Single Entry Child — Support Service",
+    title: "60 Days Single Entry Child",
     description: "Structured assistance for preparing your UAE entry documents.",
     price: "AED 781",
   },
   {
-    title: "30 Days Multiple Entry — Support Service",
+    title: "30 Days Multiple Entry",
     description: "Structured assistance for preparing your UAE entry documents.",
     price: "AED 1,171",
   },
   {
-    title: "30 Days Multiple Entry Child — Support Service",
+    title: "30 Days Multiple Entry Child",
     description: "Structured assistance for preparing your UAE entry documents.",
     price: "AED 911",
   },
   {
-    title: "60 Days Multiple Entry — Support Service",
+    title: "60 Days Multiple Entry",
     description: "Structured assistance for preparing your UAE entry documents.",
     price: "AED 1,497",
   },
   {
-    title: "60 Days Multiple Entry Child — Support Service",
+    title: "60 Days Multiple Entry Child",
     description: "Structured assistance for preparing your UAE entry documents.",
     price: "AED 1,041",
   },

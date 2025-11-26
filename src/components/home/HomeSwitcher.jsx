@@ -159,7 +159,7 @@ export default function HomeSwitcher({
       </section>
 
       <section id="white-content-start" className="bg-neutral-50">
-        <div className="mx-auto max-w-[100rem] px-4 py-16">
+        <div className="mx-auto max-w-7xl px-4 py-16">
           {isInvestor ? (
             <InvestorView content={investorContent} />
           ) : (
@@ -304,20 +304,16 @@ function TouristView({ content }) {
     <div className="space-y-16">
       <div className="space-y-6" data-animate="fade-up">
         <h2 className="text-3xl font-semibold text-[#0b1f40]">UAE Travel & Entry Support — Choose Your Service</h2>
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="flex flex-col gap-4">
           {content.durations.map((duration, index) => (
             <div
               key={duration.title}
-              className="rounded-2xl border border-[#cfe2ff] bg-white p-5 shadow-sm"
+              className="flex items-center justify-between rounded-2xl border border-[#cfe2ff] bg-white p-5 shadow-sm"
               data-animate="fade-up"
               style={{ transitionDelay: `${index * 60}ms` }}
             >
               <p className="text-lg font-semibold text-[#0b1f40]">{duration.title}</p>
-              <p className="mt-2 text-sm text-slate-600">{duration.description}</p>
-              {duration.price && (
-                <p className="mt-3 text-xl font-bold text-[#0074ff]">{duration.price}</p>
-              )}
-              <a className="mt-4 inline-flex items-center text-sm font-semibold text-[#0074ff] hover:text-[#005bcc]" href="#lead-form">
+              <a className="inline-flex items-center text-sm font-semibold text-[#0074ff] hover:text-[#005bcc]" href="#lead-form">
                 Get Support →
               </a>
             </div>
