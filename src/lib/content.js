@@ -64,26 +64,25 @@ export const investorPreApprovalAdvantages = [
 
 export const investorTimeline = [
   {
-    title: "Application",
-    description: "An application is submitted for the registration of company",
+    title: "Consultation",
+    description: "We review your goals and outline the most suitable pathway for business setup and residency options.",
   },
   {
-    title: "Documentation",
-    description: "Submission of documents and signing of application forms",
+    title: "Preparation",
+    description: "We help you organize required documents and understand the steps involved.",
   },
   {
-    title: "Registered",
-    description: "Company registration and formation is complete",
+    title: "Registration",
+    description: "Company formation is completed through licensed UAE authorities, with our team guiding you throughout the process.",
   },
 ];
 
 export const investorSuggestedCopy = [
-  "Secure legal residence in Dubai and the UAE—live, work and build your business.",
-  "Sponsor your spouse and children under one investor visa.",
-  "100% ownership of your UAE business—no local partner needed in top free zones.",
-  "Benefit from Dubai’s tax-friendly environment—keep more profit.",
-  "Open UAE bank accounts with ease as a resident investor.",
-  "Investor visa today, longer-term residency tomorrow—your path to stability.",
+  "Build and operate your UAE business with clarity and confidence.",
+  "Guidance for family sponsorship options through the relevant UAE channels.",
+  "Keep more of your earnings through the UAE's tax-friendly environment.",
+  "Insights on opening UAE bank accounts as an investor.",
+  "Start your investor pathway today — structured guidance from experts.",
 ];
 
 export const investorFaq = [
@@ -119,43 +118,43 @@ export const investorFaq = [
 
 export const touristDurations = [
   {
-    title: "30 Days Single Entry Tourist Visa",
-    description: "Perfect for leisure travelers and short family trips.",
+    title: "30 Days Single Entry — Support Service",
+    description: "Structured assistance for preparing your UAE entry documents.",
     price: "AED 846",
   },
   {
-    title: "30 Days Child Visa",
-    description: "Tourist visa for children under 18.",
+    title: "30 Days Child — Support Service",
+    description: "Structured assistance for preparing your UAE entry documents.",
     price: "AED 651",
   },
   {
-    title: "60 Days Single Entry Tourist Visa",
-    description: "Extended stay for exploring opportunities and events.",
+    title: "60 Days Single Entry — Support Service",
+    description: "Structured assistance for preparing your UAE entry documents.",
     price: "AED 1,041",
   },
   {
-    title: "60 Days Single Entry Child",
-    description: "Extended tourist visa for children under 18.",
+    title: "60 Days Single Entry Child — Support Service",
+    description: "Structured assistance for preparing your UAE entry documents.",
     price: "AED 781",
   },
   {
-    title: "30 Days Multiple Entry Tourist Visa",
-    description: "Multiple entries for frequent travelers within 30 days.",
+    title: "30 Days Multiple Entry — Support Service",
+    description: "Structured assistance for preparing your UAE entry documents.",
     price: "AED 1,171",
   },
   {
-    title: "30 Days Multiple Entry Child Visa",
-    description: "Multiple entry visa for children under 18.",
+    title: "30 Days Multiple Entry Child — Support Service",
+    description: "Structured assistance for preparing your UAE entry documents.",
     price: "AED 911",
   },
   {
-    title: "60 Days Multiple Entry Tourist Visa",
-    description: "Multiple entries for extended stays and business trips.",
+    title: "60 Days Multiple Entry — Support Service",
+    description: "Structured assistance for preparing your UAE entry documents.",
     price: "AED 1,497",
   },
   {
-    title: "60 Days Multiple Entry Child",
-    description: "Multiple entry extended visa for children under 18.",
+    title: "60 Days Multiple Entry Child — Support Service",
+    description: "Structured assistance for preparing your UAE entry documents.",
     price: "AED 1,041",
   },
 ];
@@ -173,15 +172,15 @@ export const touristRequirements = [
 export const touristTimeline = [
   {
     title: "Submit Request",
-    description: "Complete the quick form and share your passport copy and photo.",
+    description: "Share your details and travel plans.",
   },
   {
-    title: "Verification",
-    description: "We confirm eligibility, review documents, and advise on any extras.",
+    title: "Review & Guidance",
+    description: "We review your documents and guide you through required steps.",
   },
   {
-    title: "Approval",
-    description: "Most tourist visas are approved within 24–48 hours, subject to authorities.",
+    title: "Completion With Authorities",
+    description: "We coordinate next steps with licensed UAE channels.",
   },
 ];
 
@@ -204,17 +203,17 @@ export const socialProofCards = [
   {
     initials: "AA",
     city: "Karachi",
-    quote: "Investor visa approved in days. Cipher Global handled banking and Emirates ID smoothly.",
+    quote: "Clear guidance and smooth coordination throughout my UAE setup.",
   },
   {
     initials: "RM",
     city: "Dallas",
-    quote: "Tourist visas for my family were issued within 24 hours. Super responsive on WhatsApp.",
+    quote: "Everything was handled professionally with fast communication.",
   },
   {
     initials: "LS",
     city: "Dubai",
-    quote: "Relocated my startup with zero guesswork. Clear pricing and real UAE experts.",
+    quote: "No guesswork. Step-by-step direction made the process simple.",
   },
 ];
 

@@ -3,8 +3,9 @@
 import { useMemo, useState } from 'react';
 
 const visaOptions = [
-  { value: 'investor', label: 'Investor Visa' },
-  { value: 'tourist', label: 'Tourist Visa' },
+  { value: 'investor', label: 'Investor Pathway Support' },
+  { value: 'business', label: 'Business Setup Support' },
+  { value: 'tourist', label: 'Travel & Entry Support' },
 ];
 
 const initialState = (defaultVisaType) => ({
@@ -192,7 +193,7 @@ export default function LeadForm({ defaultVisaType = 'investor' }) {
 
         <div>
           <label className="block text-sm font-semibold text-[#0b1f40]" htmlFor="visaType">
-            Visa Type
+            Service Type
           </label>
           <select
             id="visaType"
@@ -229,7 +230,7 @@ export default function LeadForm({ defaultVisaType = 'investor' }) {
           className="w-full rounded-full bg-[#0074ff] px-6 py-3 text-sm font-semibold text-white! shadow-md transition hover:bg-[#006ae6] disabled:cursor-not-allowed disabled:opacity-60"
           disabled={submitting}
         >
-          {submitting ? 'Sending…' : 'Apply Now'}
+          {submitting ? 'Sending…' : 'Request Support'}
         </button>
       </form>
     </div>

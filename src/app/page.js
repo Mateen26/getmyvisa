@@ -26,21 +26,21 @@ const options = [
   {
     id: 'investor',
     badge: 'Residency + Business',
-    title: 'Investor Visa',
-    description: 'Launch your company, secure Emirates ID, and sponsor your family with a long-term UAE investor visa.',
+    title: 'Investor Pathway Support',
+    description: 'Launch your business in the UAE and understand the residency options available through company formation and investment.',
     points: [
-      'Business setup and residency bundled',
-      'Full document prep and pre-approval guidance',
+      'Business setup insights and structured support',
+      'Document guidance and preparation assistance',
     ],
   },
   {
     id: 'tourist',
     badge: 'Fast Stays',
-    title: 'Tourist Visa',
-    description: 'Need 30 or 60 days? Get a reliable UAE tourist visa with quick turnaround and airline-ready paperwork.',
+    title: 'Travel & Entry Support',
+    description: 'Get clear guidance on UAE entry requirements with fast coordination, checklists, and document review for your travel plans.',
     points: [
-      'Approvals in as little as 24 hours',
-      'Families and solo travelers welcome',
+      'Quick turnaround guidance',
+      'Support for families and solo travelers',
     ],
   },
 ];

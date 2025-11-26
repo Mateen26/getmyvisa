@@ -22,7 +22,7 @@ export default function CTASticky({ targetId = 'lead-form' }) {
             onClick={handleScroll}
             className="flex-1 rounded-full bg-[#0074ff] px-4 py-2 text-sm font-semibold text-white! shadow-md transition hover:bg-[#006ae6]"
           >
-            Apply Now
+            Request Support
           </button>
           <a
             href={siteConfig.whatsapp1Href}

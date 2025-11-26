@@ -29,11 +29,11 @@ export default function InvestorVisaPage() {
               Start Your Business. Live Legally in Dubai.
             </h1>
             <p className="text-lg text-[#d4e7ff]">
-              Cipher Global LLC handles everything—from company formation and licensing to Emirates ID and family sponsorship.
+              Get structured support and clear direction for your UAE business setup and residency pathway from Cipher Global.
             </p>
             <div className="flex flex-wrap gap-3">
               <a className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#0b1f40]! hover:bg-[#e6f1ff]" href="#investor-lead">
-                Apply Now
+                Request Support
               </a>
               <a className="rounded-full bg-[#006ae6] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#005bcc]" href={siteConfig.phoneHref}>
                 Call
@@ -52,7 +52,7 @@ export default function InvestorVisaPage() {
       <section className="mx-auto max-w-7xl px-4 py-16">
         <div className="space-y-16">
           <div className="space-y-6">
-            <h2 className="text-3xl font-semibold text-[#0b1f40]">Why Dubai Investors Work with Cipher Global</h2>
+            <h2 className="text-3xl font-semibold text-[#0b1f40]">Why Investors Choose the UAE</h2>
             <BenefitsGrid items={investorAdvantages} columns={2} />
           </div>
 
@@ -86,13 +86,13 @@ export default function InvestorVisaPage() {
 
           <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="rounded-3xl border border-[#8fc3ff]/30 bg-[#0074ff] p-8 text-white">
-              <h3 className="text-2xl font-semibold">Ready to establish your UAE presence?</h3>
+              <h3 className="text-2xl font-semibold">Start Your UAE Investment Journey with Expert Guidance</h3>
               <p className="mt-3 text-sm text-[#d4e7ff]">
-                From pre-approval to Emirates ID, Cipher Global LLC delivers an end-to-end investor visa experience built for speed and compliance.
+                Clear steps, structured support, and dedicated experts for your UAE plans.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#0b1f40]! hover:bg-[#e6f1ff]" href="#investor-lead">
-                  Apply Now
+                  Request Support
                 </a>
                 <a className="rounded-full bg-[#006ae6] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#005bcc]" href={siteConfig.phoneHref}>
                   Call

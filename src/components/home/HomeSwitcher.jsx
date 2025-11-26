@@ -81,10 +81,10 @@ export default function HomeSwitcher({
               {siteConfig.tagline}
             </div>
             <h1 className="mx-auto max-w-4xl text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl">
-              Transform Your Dream Into Reality
+              Transform Your Move to Dubai with Expert Guidance
             </h1>
             <p className="mx-auto max-w-2xl text-xl text-[#e1efff] md:text-2xl">
-              From idea to reality: Dubai visa and business setup simplified with Cipher Global expertise. Choose your path—we handle the rest.
+              From business setup to residency pathways, get structured support and clear direction from Cipher Global. Your goals — our expertise.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
               <a
@@ -127,16 +127,16 @@ export default function HomeSwitcher({
               Building Your Bridge to Dubai
             </div>
             <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl">
-              Ready to Start Your Visa in Dubai?
+              Ready to Begin Your UAE Journey?
             </h1>
-            <p className="max-w-xl text-lg text-[#e7f2ff]">Pick your path. We’ll handle the rest.</p>
+            <p className="max-w-xl text-lg text-[#e7f2ff]">Choose the pathway that matches your goals. We guide you through requirements, preparation, and next steps with clarity and support.</p>
             <SplitSelector options={options} active={activeVisa} onChange={setActiveVisa} />
             <div className="flex flex-wrap gap-3">
               <a
                 href="#lead-form"
                 className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#0b1f40]! shadow-md transition hover:bg-[#e6f1ff]"
               >
-                Apply Now
+                Request Support
               </a>
               <a
                 href={siteConfig.phoneHref}
@@ -159,7 +159,7 @@ export default function HomeSwitcher({
       </section>
 
       <section id="white-content-start" className="bg-neutral-50">
-        <div className="mx-auto max-w-7xl px-4 py-16">
+        <div className="mx-auto max-w-[100rem] px-4 py-16">
           {isInvestor ? (
             <InvestorView content={investorContent} />
           ) : (
@@ -215,7 +215,7 @@ export default function HomeSwitcher({
               className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#0b1f40]! transition-all hover:bg-[#e6f1ff] hover:scale-105 hover:shadow-xl" 
               href="#lead-form"
             >
-              Apply Now
+              Request Support
             </a>
             <a className="rounded-full bg-[#006ae6] px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-[#005bcc] hover:scale-105" href={siteConfig.phoneHref}>
               Call
@@ -244,7 +244,7 @@ function InvestorView({ content }) {
   return (
     <div className="space-y-16">
       <div className="space-y-6" data-animate="fade-up">
-        <h2 className="text-3xl font-semibold text-[#0b1f40]">Why Choose a Dubai Investor Visa?</h2>
+        <h2 className="text-3xl font-semibold text-[#0b1f40]">Why Investors Choose the UAE</h2>
         <BenefitsGrid items={content.advantages} columns={2} />
       </div>
 
@@ -279,13 +279,13 @@ function InvestorView({ content }) {
       </div>
 
       <div className="rounded-3xl border border-[#8fc3ff]/30 bg-[#0074ff] p-8 text-white shadow-2xl" data-animate="fade-up">
-        <h3 className="text-2xl font-semibold">Investor CTA</h3>
+        <h3 className="text-2xl font-semibold">Start Your UAE Investment Journey with Expert Guidance</h3>
         <p className="mt-2 text-sm text-[#d4e7ff]">
-          Launch your investor visa today. Secure residency, set up your company, and open UAE banking with Cipher Global experts.
+          Clear steps, structured support, and dedicated experts for your UAE plans.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#0b1f40]! transition-all hover:bg-[#e6f1ff] hover:scale-105 hover:shadow-xl" href="#lead-form">
-            Apply Now
+            Request Support
           </a>
           <a className="rounded-full bg-[#006ae6] px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-[#005bcc] hover:scale-105" href={siteConfig.phoneHref}>
             Call
@@ -303,7 +303,7 @@ function TouristView({ content }) {
   return (
     <div className="space-y-16">
       <div className="space-y-6" data-animate="fade-up">
-        <h2 className="text-3xl font-semibold text-[#0b1f40]">Dubai Tourist Visas — Choose Your Stay</h2>
+        <h2 className="text-3xl font-semibold text-[#0b1f40]">UAE Travel & Entry Support — Choose Your Service</h2>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {content.durations.map((duration, index) => (
             <div
@@ -318,13 +318,13 @@ function TouristView({ content }) {
                 <p className="mt-3 text-xl font-bold text-[#0074ff]">{duration.price}</p>
               )}
               <a className="mt-4 inline-flex items-center text-sm font-semibold text-[#0074ff] hover:text-[#005bcc]" href="#lead-form">
-                Apply Now →
+                Get Support →
               </a>
             </div>
           ))}
         </div>
         <p className="mt-6 text-xs leading-relaxed text-slate-600" data-animate="fade-up">
-          <strong className="text-slate-900">Disclaimer:</strong> All fees shown above include both UAE government processing charges and our service fee for managing the application. Prices are subject to change without prior notice and are based on current immigration and administrative costs. While we assist throughout the process, final visa approval is solely determined by UAE immigration authorities, and service portions of the fees are non-refundable once submission has begun.
+          <strong className="text-slate-900">Disclaimer:</strong> Government fees are paid directly to the appropriate UAE authorities. Our fees cover consulting, coordination, and document preparation support.
         </p>
       </div>
 
@@ -366,13 +366,13 @@ function TouristView({ content }) {
       </div>
 
       <div className="rounded-3xl border border-[#8fc3ff]/30 bg-[#0074ff] p-8 text-white shadow-2xl" data-animate="fade-up">
-        <h3 className="text-2xl font-semibold">Tourist CTA</h3>
+        <h3 className="text-2xl font-semibold">Planning a Trip to Dubai? We'll Guide You Through Every Step.</h3>
         <p className="mt-2 text-sm text-[#d4e7ff]">
-          Planning a visit to Dubai? Secure your tourist visa quickly with consultants who understand every airline and immigration checklist.
+          Clear guidance, structured support, and dedicated experts for your travel plans.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <a className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#0b1f40]! transition-all hover:bg-[#e6f1ff] hover:scale-105 hover:shadow-xl" href="#lead-form">
-            Apply Now
+            Get Support
           </a>
           <a className="rounded-full bg-[#006ae6] px-6 py-3 text-sm font-semibold text-white shadow-md transition-all hover:bg-[#005bcc] hover:scale-105" href={siteConfig.phoneHref}>
             Call

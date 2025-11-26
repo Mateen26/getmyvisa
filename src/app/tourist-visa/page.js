@@ -21,18 +21,18 @@ export default function TouristVisaPage() {
     <div className="bg-neutral-50">
       <section className="relative overflow-hidden bg-[url('https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center">
         <div className="absolute inset-0 bg-gradient-to-br from-[#001f66]/80 via-[#0074ff]/80 to-[#6fb7ff]/70" aria-hidden />
-        <div className="relative mx-auto max-w-7xl px-4 py-20 text-white">
+        <div className="relative mx-auto max-w-[100rem] px-4 py-20 text-white">
           <div className="max-w-3xl space-y-6">
             <p className="text-sm uppercase tracking-[0.3em] text-white/70">Tourist Visas</p>
             <h1 className="text-4xl font-semibold md:text-5xl">
-              Fast, Reliable Tourist Visas for Dubai
+              UAE Travel & Entry Support
             </h1>
             <p className="text-lg text-[#d4e7ff]">
-              Choose 14, 30, 60, or 90-day stays. We manage airline-ready documentation, immigration submissions, and quick WhatsApp updates.
+              Get clear guidance on UAE entry requirements with fast coordination, checklists, and document review for your travel plans.
             </p>
             <div className="flex flex-wrap gap-3">
               <a className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#0b1f40]! hover:bg-[#e6f1ff]" href="#tourist-lead">
-                Apply Now
+                Get Support
               </a>
               <a className="rounded-full bg-[#006ae6] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#005bcc]" href={siteConfig.phoneHref}>
                 Call
@@ -45,11 +45,11 @@ export default function TouristVisaPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 py-16">
+      <section className="mx-auto max-w-[100rem] px-4 py-16">
         <div className="space-y-16">
           <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="space-y-6">
-              <h2 className="text-3xl font-semibold text-[#0b1f40]">Duration Options</h2>
+              <h2 className="text-3xl font-semibold text-[#0b1f40]">UAE Travel & Entry Support — Choose Your Service</h2>
               <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4">
                 {touristDurations.map((duration) => (
                   <div key={duration.title} className="rounded-2xl border border-[#cfe2ff] bg-white p-5 shadow-sm">
@@ -59,13 +59,13 @@ export default function TouristVisaPage() {
                       <p className="mt-3 text-xl font-bold text-[#0074ff]">{duration.price}</p>
                     )}
                     <a className="mt-4 inline-flex items-center text-sm font-semibold text-[#0074ff]! hover:text-[#005bcc]" href="#tourist-lead">
-                      Apply Now →
+                      Get Support →
                     </a>
                   </div>
                 ))}
               </div>
               <p className="mt-6 text-xs leading-relaxed text-slate-600">
-                <strong className="text-slate-900">Disclaimer:</strong> All fees shown above include both UAE government processing charges and our service fee for managing the application. Prices are subject to change without prior notice and are based on current immigration and administrative costs. While we assist throughout the process, final visa approval is solely determined by UAE immigration authorities, and service portions of the fees are non-refundable once submission has begun.
+                <strong className="text-slate-900">Disclaimer:</strong> Government fees are paid directly to the appropriate UAE authorities. Our fees cover consulting, coordination, and document preparation support.
               </p>
             </div>
             <div id="tourist-lead" className="self-start">
@@ -107,13 +107,13 @@ export default function TouristVisaPage() {
 
           <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="rounded-3xl border border-[#8fc3ff]/30 bg-[#0074ff] p-8 text-white">
-              <h3 className="text-2xl font-semibold">Need a visa for your next trip?</h3>
+              <h3 className="text-2xl font-semibold">Planning a Trip to Dubai? We'll Guide You Through Every Step.</h3>
               <p className="mt-3 text-sm text-[#d4e7ff]">
-                Cipher Global LLC guides you through every step—documents, payments, airline requirements, and extension options.
+                Clear guidance, structured support, and dedicated experts for your travel plans.
               </p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <a className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-[#0b1f40]! hover:bg-[#e6f1ff]" href="#tourist-lead">
-                  Apply Now
+                  Get Support
                 </a>
                 <a className="rounded-full bg-[#006ae6] px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-[#005bcc]" href={siteConfig.phoneHref}>
                   Call
