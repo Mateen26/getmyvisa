@@ -2,6 +2,7 @@ import Script from 'next/script';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import WhatsAppFloat from '@/components/WhatsAppFloat';
 import { siteConfig } from '@/lib/content';
 import './globals.css';
 
@@ -150,6 +151,8 @@ export default function RootLayout({ children }) {
         <Header />
         <main className="min-h-screen bg-neutral-50 overflow-x-hidden">{children}</main>
         <Footer />
+        
+        <WhatsAppFloat />
         
         {/* Google Ads Tag */}
         {googleAdsLoaderId && (
