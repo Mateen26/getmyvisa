@@ -1,5 +1,6 @@
 import HomeSwitcher from '@/components/home/HomeSwitcher';
 import {
+  businessSetupSteps,
   complianceDisclaimer,
   investorAdvantages,
   investorFaq,
@@ -47,6 +48,7 @@ const options = [
 
 const investorContent = {
   advantages: investorAdvantages,
+  businessSetupSteps: businessSetupSteps,
   preApprovalAdvantages: investorPreApprovalAdvantages,
   preApprovalChecklist: investorPreApprovalChecklist,
   requirements: investorRequirements,

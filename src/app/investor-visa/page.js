@@ -1,9 +1,12 @@
 import BenefitsGrid from '@/components/BenefitsGrid';
+import BusinessSetupSteps from '@/components/BusinessSetupSteps';
 import ContactBlock from '@/components/ContactBlock';
 import FAQ from '@/components/FAQ';
 import LeadForm from '@/components/LeadForm';
 import Timeline from '@/components/Timeline';
+import AnimationObserver from '@/components/AnimationObserver';
 import {
+  businessSetupSteps,
   investorAdvantages,
   investorFaq,
   investorSuggestedCopy,
@@ -19,7 +22,9 @@ export const metadata = {
 
 export default function InvestorVisaPage() {
   return (
-    <div className="bg-neutral-50">
+    <>
+      <AnimationObserver />
+      <div className="bg-neutral-50">
       <section className="relative overflow-hidden bg-[url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center">
         <div className="absolute inset-0 bg-gradient-to-br from-[#001f66]/80 via-[#0074ff]/80 to-[#6fb7ff]/70" aria-hidden />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-24 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
@@ -61,6 +66,10 @@ export default function InvestorVisaPage() {
             <div className="mt-4 rounded-2xl border border-[#cfe2ff] bg-white p-6 shadow-sm">
               <Timeline steps={investorTimeline} />
             </div>
+          </div>
+
+          <div>
+            <BusinessSetupSteps steps={businessSetupSteps} targetId="investor-lead" />
           </div>
 
           <div>
@@ -107,6 +116,7 @@ export default function InvestorVisaPage() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 

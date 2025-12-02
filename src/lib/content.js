@@ -85,6 +85,39 @@ export const investorSuggestedCopy = [
   "Start your investor pathway today — structured guidance from experts.",
 ];
 
+export const businessSetupSteps = [
+  {
+    title: "Choose Legal Entity",
+    description: "Decide on the type of entity you want to establish in the free zone, considering the capital requirement for that particular zone.",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Select a Trade Name",
+    description: "Pick your company's unique and permissible trade name, ensuring it is not already registered.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Apply For a Business License",
+    description: "Submit the required documents and apply for the appropriate business license based on your company's primary activity.",
+    image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Secure Office Space",
+    description: "Determine the suitable office space, either through purchasing or leasing, depending on your business's needs.",
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Obtain Approvals & Register",
+    description: "Get initial approval, business approvals, and register your company on the free zone authority's portal.",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    title: "Obtain The License",
+    description: "Once the process is completed, you will receive your business license to start your operations within 2–4 weeks.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80",
+  },
+];
+
 export const investorFaq = [
   {
     question: "How long does it take?",

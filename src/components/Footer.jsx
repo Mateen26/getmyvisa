@@ -14,9 +14,9 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-3 lg:grid-cols-4">
           <div className="md:col-span-1">
           <Image
-              src="/CIPHERGLOBALLOGOsecond.png"
+              src="/MOCKUP2.png"
               alt={`${siteConfig.name} logo`}
-              width={160}
+              width={200}
               height={38}
               className=" transition duration-700 ease-in-out"
               priority
@@ -66,6 +66,10 @@ export default function Footer() {
                 <a className="transition text-black hover:text-[#0074ff]" href={siteConfig.whatsapp2Href}>
                   WhatsApp: {siteConfig.whatsapp2}
                 </a>
+              </li>
+              <li className="mt-4 pt-2 border-t border-slate-200">
+                <p className="text-black font-semibold">Dubai, UAE</p>
+                <p className="text-black mt-1">Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai, U.A.E.</p>
               </li>
             </ul>
           </div>

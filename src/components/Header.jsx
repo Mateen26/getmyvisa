@@ -100,7 +100,7 @@ export default function Header() {
             className="flex items-center"
           >
             <Image
-              src="/CIPHERGLOBALLOGOsecond.png"
+              src="/MOCKUP2.png"
               alt={`${siteConfig.name} logo`}
               width={160}
               height={38}

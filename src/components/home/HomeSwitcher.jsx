@@ -5,6 +5,7 @@ import Image from 'next/image';
 import SplitSelector from '@/components/SplitSelector';
 import LeadForm from '@/components/LeadForm';
 import BenefitsGrid from '@/components/BenefitsGrid';
+import BusinessSetupSteps from '@/components/BusinessSetupSteps';
 import PreApprovalCard from '@/components/PreApprovalCard';
 import Timeline from '@/components/Timeline';
 import FAQ from '@/components/FAQ';
@@ -253,6 +254,10 @@ function InvestorView({ content }) {
         <div className="mt-4 rounded-2xl border border-[#cfe2ff] bg-white p-6 shadow-sm">
           <Timeline steps={content.timeline} />
         </div>
+      </div>
+
+      <div data-animate="fade-up">
+        <BusinessSetupSteps steps={content.businessSetupSteps} targetId="lead-form" />
       </div>
 
       <div data-animate="fade-up">
